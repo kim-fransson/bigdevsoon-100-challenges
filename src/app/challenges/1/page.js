@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PetsIcon from '@mui/icons-material/Pets';
+import { Button as AriaButton } from 'react-aria-components';
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"] });
 
@@ -80,8 +81,8 @@ const IconLink = ({ href, Icon }) => {
 
 const Button = ({ className, children }) => {
   return (
-    <button className={`outline-none text-lg w-full px-3 py-2 rounded-full active:scale-95 transition-all focus-visible:scale-105 hover:scale-105 ${className}`}>
+    <AriaButton className={`outline-none text-lg w-full px-3 py-2 rounded-full pressed:scale-95 transition-all focus-visible:scale-105 hover:scale-105 ${className}`}>
       {children}
-    </button>
+    </AriaButton>
   )
 }
