@@ -15,9 +15,9 @@ export default function AddToBag() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   return (
     <main className={`min-h-dvh bg-white flex justify-center items-center ${lora.className}`}>
-      <article className="max-w-4xl w-full flex gap-4">
-          <RadioGroup className="" value={selectedImageIndex} onChange={setSelectedImageIndex} aria-label="select image">
-            <div className="flex flex-col gap-4 items-center mt-2">
+      <article className="md:max-w-4xl w-full flex md:flex-row flex-col gap-4">
+          <RadioGroup className="md:order-1 order-3" value={selectedImageIndex} onChange={setSelectedImageIndex} aria-label="select image">
+            <div className="flex md:flex-col flex-row gap-4 items-center md:p-0 p-4">
               <Radio className="cursor-pointer ring-2 ring-transparent selected:ring-[#2c80fe] focus-visible:ring-yellow-400 rounded-md overflow-clip" value={0}>
                 <Image width={50} height={65} src={images[0]} alt="" />
               </Radio>
@@ -30,11 +30,11 @@ export default function AddToBag() {
             </div>
           </RadioGroup>
 
-        <div className="overflow-clip rounded-md">
-          <Image width={325} height={400} src={images[selectedImageIndex]} alt="" />
+        <div className="overflow-clip md:rounded-md order-2">
+          <Image width={325} height={400} src={images[selectedImageIndex]} alt="" className="md:w-auto md:h-auto w-full h-[400px] object-cover" />
         </div>
 
-        <div className="flex-1 flex flex-col justify-start gap-6 py-3 ml-4">
+        <div className="flex-1 flex flex-col justify-start md:gap-6 md:py-3 p-4 gap-4 md:ml-4 md:order-3 order-1">
           <h2 className="text-sm font-semibold text-[#2c80fe]">POLO RALPH</h2>
           <h3 className="text-4xl font-semibold">Custom Fit Polo Bear Oxford Shirt</h3>
           <p className="text-gray-600">Blue polo with a classic cut. Made of smooth and soft cotton.</p>
