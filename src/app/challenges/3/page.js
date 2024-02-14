@@ -26,9 +26,9 @@ export default function MobileNavigation() {
             height={50}
             src="/challenges/3/profile.png"
             alt=""
-            className="rounded-lg object-none"
+            className="rounded-lg w-[50px] h-[50px] object-cover"
           />
-          <div className="grid">
+          <div className="grid items-center">
             <span className="font-semibold text-black">Kim Fransson</span>
             <span className="text-gray-800 font-medium">
               Fullstack developer
@@ -91,7 +91,7 @@ const RadioOption = ({ value, Icon }) => {
       focus-visible:ring-2 ring-yellow-400"
       value={value}
     >
-      <Icon />
+      <Icon className="md:h-6 md:w-6 h-8 w-8" />
     </Radio>
   );
 };
