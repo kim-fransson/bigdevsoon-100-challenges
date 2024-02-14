@@ -14,7 +14,7 @@ import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
-import { Button, Radio, RadioGroup } from "react-aria-components";
+import { Radio, RadioGroup } from "react-aria-components";
 
 export default function MobileNavigation() {
   return (
