@@ -29,9 +29,9 @@ export default function ContactUs() {
             want to say hello, we&apos;re here for you.
           </p>
 
-          <div className="bg-[#ff007a] p-3 rounded-xl text-gray-50 max-w-sm flex flex-col gap-1 relative mt-4">
-            <h2>Windler, Lockman and McClure</h2>
-            <p className="text-gray-200 text-xs">
+          <div className="bg-[#ff007a] p-3 rounded-xl text-white max-w-sm flex flex-col gap-1 relative mt-4">
+            <h2 className="font-semibold">Windler, Lockman and McClure</h2>
+            <p className="text-gray-100 text-xs font-medium">
               3629 N Cole Rd, Boise, Illinois
             </p>
           </div>
