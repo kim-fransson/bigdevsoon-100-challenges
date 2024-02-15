@@ -93,7 +93,7 @@ const ImageRadio = ({ value }) => {
   return (
     <Radio
       className={twMerge(
-        "cursor-pointer opacity-50 selected:opacity-100 transition-opacity ring-yellow-400 focus-visible:ring-2 rounded-md overflow-clip"
+        "cursor-pointer opacity-50 selected:opacity-100 transition-opacity ring-yellow-400 focus-visible:ring-2 rounded-md overflow-clip",
       )}
       value={value}
     >
