@@ -18,6 +18,7 @@
     "react-aria-components": "^1.0.1",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
+    "tailwindcss-animated": "^1.0.1",
     "tailwindcss-react-aria-components": "^1.0.0"
   },
   "devDependencies": {

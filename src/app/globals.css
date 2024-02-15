@@ -9,4 +9,14 @@ body {
 }
 
 @layer utilities {
+    .opacity-gradient-bottom-top {
+        mask-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    }
+
+    .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

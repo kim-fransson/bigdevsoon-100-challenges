@@ -17,5 +17,6 @@ module.exports = {
   plugins: [
     require("tailwindcss-react-aria-components"),
     require("tailwindcss-animate"),
+    require("tailwindcss-animated"),
   ],
 };
