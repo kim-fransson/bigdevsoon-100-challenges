@@ -21,22 +21,22 @@ export default function Recipe() {
   return (
     <main className={`min-h-dvh grid items-center justify-center bg-[#f2f3ed] ${fredoka.className}`}>
       <div className="grid lg:grid-cols-2 max-w-5xl lg:rounded-xl lg:shadow-lg bg-white overflow-clip relative">
-        <div className="grid text-[#636363] px-8 lg:pt-24 lg:pb-0 py-8 order-2 items-center">
-          <div className="bg-white text-gray-900 grid gap-2 py-3 lg:pl-8 px-4 absolute top-12 lg:right-72 lg:left-auto left-0 lg:max-w-sm">
+        <div className="grid text-[#636363] p-8 order-2 items-center">
+          <div>
+          <div className="bg-white text-gray-900 grid gap-2 lg:mr-20">
             <div className="flex items-center gap-2">
               <div className="text-[#fea319] flex items-center gap-1">
-                <StarIcon className="w-4 h-4" />
-                <StarIcon className="w-4 h-4" />
-                <StarIcon className="w-4 h-4" />
-                <StarIcon className="w-4 h-4" />
-                <StarBorderIcon className="w-4 h-4" />
+                <StarIcon fontSize="small"/>
+                <StarIcon fontSize="small" />
+                <StarIcon fontSize="small" />
+                <StarIcon fontSize="small" />
+                <StarBorderIcon fontSize="small" />
               </div>
-              <span className="text-[0.6rem] font-medium">(189)</span>
+              <span className="text-xs font-medium">(189)</span>
             </div>
             <h2 className="text-3xl font-semibold">Sweet iced Coffee with Coconut Milk</h2>
           </div>
-          <div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mt-4">
               <BannerIcon
                 Icon={AvTimerIcon}
                 title="total time"
@@ -54,14 +54,14 @@ export default function Recipe() {
               />
             </div>
 
-            <p className="italic text-gray-700 text-xs mt-4">
+            <p className="italic text-gray-700 mt-4">
               Sweet Iced Coffe with coconut milk is easy to make and stores well
               in the fridge. Make a large batch and save yourself a few trips to
               the coffee shop
             </p>
 
             <CheckboxGroup className="grid gap-1 mt-8">
-              <Label className="text-xs font-bold text-gray-800">
+              <Label className="font-bold text-gray-800">
                 INGREDIENTS
               </Label>
               <IngredientsCheckbox value="3 tablespoon Espresso coffee powder" />
@@ -71,7 +71,7 @@ export default function Recipe() {
             </CheckboxGroup>
 
             <div className="grid gap-3">
-              <Label className="text-xs font-bold text-gray-800 mt-8">
+              <Label className="font-bold text-gray-800 mt-8">
                 INSTRUCTIONS
               </Label>
 
@@ -124,8 +124,8 @@ const BannerIcon = ({ Icon, title, value }) => {
     <div className="flex items-center gap-2">
       <Icon className="w-5 h-5" />
       <div className="grid">
-        <span className="uppercase text-[0.6rem] font-medium">{title}</span>
-        <span className="text-[#febb57] text-[0.6rem] font-medium">{value}</span>
+        <span className="uppercase text-xs font-medium">{title}</span>
+        <span className="text-[#febb57] text-xs font-medium">{value}</span>
       </div>
     </div>
   );
@@ -137,11 +137,11 @@ const IngredientsCheckbox = ({ value }) => {
       {({ isSelected }) => (
         <div>
           {isSelected ? (
-            <CheckBoxIcon className="w-4 h-4 text-[#fea620]" />
+            <CheckBoxIcon fontSize="small" className="text-[#fea620]" />
           ) : (
-            <CheckBoxOutlineBlankIcon className="w-4 h-4" />
+            <CheckBoxOutlineBlankIcon fontSize="small" />
           )}
-          <span className="inline-block ml-1 text-xs">{value}</span>
+          <span className="inline-block ml-1 text-sm">{value}</span>
         </div>
       )}
     </Checkbox>
@@ -150,7 +150,7 @@ const IngredientsCheckbox = ({ value }) => {
 
 const InstructionsItem = ({ step, text }) => {
   return (
-    <div className="flex items-start gap-1 text-xs">
+    <div className="flex items-start gap-1 text-sm">
       <span>{`${step}.`}</span>
       {text}
     </div>
