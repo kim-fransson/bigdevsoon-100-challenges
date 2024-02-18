@@ -19,4 +19,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .challenge-7-gradient {
+    background: rgb(150, 152, 211);
+    background: linear-gradient(
+      331deg,
+      rgba(150, 152, 211, 1) 10%,
+      rgba(180, 208, 219, 1) 21%,
+      rgba(255, 255, 255, 1) 52%
+    );
+  }
 }
