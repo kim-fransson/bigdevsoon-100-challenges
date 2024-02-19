@@ -75,10 +75,12 @@ export default function MusicEvents() {
 
 const MusicEvent = ({ event }) => {
   return (
-    <div className={`px-6 py-4 rounded-2xl shadow-2xl bg-white flex gap-4`}>
+    <div
+      className={`px-6 py-4 rounded-2xl shadow-2xl bg-white grid lg:grid-cols-[max-content_1fr_max-content] grid-cols-2 gap-4`}
+    >
       <img
         src={event.thumbnail}
-        className="aspect-square w-32 rounded-lg border-4 border-[#e1d3f7] shadow-md max-w-full self-start shrink-0"
+        className="aspect-square w-32 rounded-lg border-4 border-[#e1d3f7] shadow-md max-w-full self-start"
       />
       <div className="flex flex-col gap-2">
         <h2 className="text-2xl font-medium">{event.performer}</h2>
@@ -99,11 +101,13 @@ const MusicEvent = ({ event }) => {
         </div>
       </div>
       {event.isSoldOut ? (
-        <span className="font-medium self-center ml-auto">Sold out!</span>
+        <span className="font-medium self-center ml-auto lg:col-start-3 col-start-2">
+          Sold out!
+        </span>
       ) : (
         <Button
           className="flex items-center justify-center bg-gray-950 text-gray-50 rounded-xl shadow-xl py-3 px-3.5 ml-auto focus-visible:ring-2 ring-yellow-400
-        gap-2 self-center outline-none group pressed:scale-95 transition-all"
+        gap-2 self-center lg:col-start-3 col-start-2 outline-none group pressed:scale-95 transition-all"
         >
           <ConfirmationNumberIcon
             className="group-hover:animate-wiggle group-hover:animate-infinite group-hover:animate-duration-700 
