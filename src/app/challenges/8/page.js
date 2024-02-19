@@ -46,7 +46,7 @@ const events = [
   {
     performer: "Metallica",
     venue: "Parken",
-    date: "Friday, June 14, 2024",
+    date: "June 14",
     genres: ["Hard Rock", "Heavy Metal"],
     thumbnail: "/challenges/8/5.png",
     isSoldOut: false,
@@ -55,7 +55,9 @@ const events = [
 
 export default function MusicEvents() {
   return (
-    <main className={`min-h-dvh grid items-center justify-center bg-[#eaf2ff] lg:p-8 p-4 ${fredoka.className}`}>
+    <main
+      className={`min-h-dvh grid items-center justify-center bg-[#eaf2ff] lg:p-8 p-4 ${fredoka.className}`}
+    >
       <div className="grid">
         <h2 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ae81f6] via-[#40a1f7] to-[#c4fa3c]">
           Music events
@@ -73,9 +75,7 @@ export default function MusicEvents() {
 
 const MusicEvent = ({ event }) => {
   return (
-    <div
-      className={`px-6 py-4 rounded-2xl shadow-2xl bg-white flex gap-4`}
-    >
+    <div className={`px-6 py-4 rounded-2xl shadow-2xl bg-white flex gap-4`}>
       <img
         src={event.thumbnail}
         className="aspect-square w-32 rounded-lg border-4 border-[#e1d3f7] shadow-md max-w-full self-start shrink-0"
