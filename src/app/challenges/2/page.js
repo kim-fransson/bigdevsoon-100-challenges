@@ -6,6 +6,7 @@ import { Lora } from "next/font/google";
 import { useState } from "react";
 import { Button, RadioGroup, Label, Radio } from "react-aria-components";
 import { twMerge } from "tailwind-merge";
+import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const images = [
   "/challenges/2/image-1.png",
@@ -18,6 +19,8 @@ const lora = Lora({ subsets: ["latin"], weight: ["variable"] });
 
 export default function AddToBag() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  useDocumentTitle(`Day 2 of 100`);
+
   return (
     <main
       className={`min-h-dvh bg-white flex justify-center items-center ${lora.className}`}

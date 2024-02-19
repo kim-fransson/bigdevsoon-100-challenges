@@ -1,8 +1,10 @@
+"use client";
+
 import { Button } from "react-aria-components";
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import NearMeIcon from "@mui/icons-material/NearMe";
 import EventNoteIcon from "@mui/icons-material/EventNote";
-
+import { useDocumentTitle } from "@uidotdev/usehooks";
 import { Fredoka } from "next/font/google";
 
 const fredoka = Fredoka({
@@ -54,6 +56,7 @@ const events = [
 ];
 
 export default function MusicEvents() {
+  useDocumentTitle(`Day 8 of 100`);
   return (
     <main
       className={`min-h-dvh grid items-center justify-center bg-[#eaf2ff] lg:p-8 p-4 ${fredoka.className}`}

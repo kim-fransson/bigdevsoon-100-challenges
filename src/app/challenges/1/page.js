@@ -8,6 +8,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PetsIcon from "@mui/icons-material/Pets";
 import { Button as AriaButton } from "react-aria-components";
+import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ const roboto = Roboto({
 });
 
 export default function ProfileCard() {
+  useDocumentTitle(`Day 1 of 100`);
   return (
     <main
       className={`bg-[#eff3c0] flex h-dvh flex-col justify-center items-center text-gray-900 ${roboto.className}`}
@@ -82,7 +84,8 @@ export default function ProfileCard() {
             Hey, it&apos;s Luna Whiskerfield here 🌟. Silver-grey fur, emerald
             eyes, and a spirit wild as the wind. I leap, explore, and reign from
             the highest perches. Dive into my adventures and the art of feline
-            finesse.<span className="text-[#98314f]"> #EleganceInMotion</span>
+            finesse.
+            <span className="text-[#98314f]"> #EleganceInMotion</span>
             <span className="text-[#98314f]"> #AdventureCat</span>
           </p>
 

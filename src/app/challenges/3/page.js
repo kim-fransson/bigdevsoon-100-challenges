@@ -13,10 +13,12 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { useDocumentTitle } from "@uidotdev/usehooks";
 
 import { Radio, RadioGroup } from "react-aria-components";
 
 export default function MobileNavigation() {
+  useDocumentTitle(`Day 3 of 100`);
   return (
     <main className="flex justify-center items-center min-h-dvh bg-[#dae1df]">
       <div className="md:max-w-sm w-full bg-white md:rounded-3xl md:shadow-2xl min-h-dvh md:min-h-0 flex flex-col px-4 py-8 gap-6">

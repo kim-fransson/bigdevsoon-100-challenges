@@ -9,6 +9,7 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { Checkbox, CheckboxGroup, Label } from "react-aria-components";
+import { useDocumentTitle } from "@uidotdev/usehooks";
 
 import { Fredoka } from "next/font/google";
 
@@ -18,6 +19,7 @@ const fredoka = Fredoka({
 });
 
 export default function Recipe() {
+  useDocumentTitle(`Day 5 of 100`);
   return (
     <main
       className={`min-h-dvh grid items-center justify-center bg-[#f2f3ed] ${fredoka.className}`}

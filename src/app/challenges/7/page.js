@@ -14,6 +14,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useFocusRing } from "react-aria";
 import { useState } from "react";
+import { useDocumentTitle } from "@uidotdev/usehooks";
 
 import { Hind } from "next/font/google";
 
@@ -23,6 +24,7 @@ const hind = Hind({
 });
 
 export default function CreateAccount() {
+  useDocumentTitle(`Day 7 of 100`);
   return (
     <main
       className={`min-h-dvh bg-white flex flex-col justify-center lg:items-start items-center lg:pl-20 ${hind.className}
