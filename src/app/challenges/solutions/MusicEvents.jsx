@@ -64,7 +64,7 @@ export const MusicEvents = () => {
           Music events
         </h2>
         <h3 className="text-xl mt-1 font-medium">in Copenhagen, Denmark</h3>
-        <div className="mt-16 grid lg:grid-cols-2 gap-4">
+        <div className="md:mt-16 mt-8 grid lg:grid-cols-2 gap-4">
           {events.map((event) => (
             <MusicEvent key={event.performer} event={event} />
           ))}
@@ -77,15 +77,15 @@ export const MusicEvents = () => {
 const MusicEvent = ({ event }) => {
   return (
     <div
-      className={`px-6 py-4 rounded-2xl shadow-2xl bg-white grid lg:grid-cols-[max-content_1fr_max-content] grid-cols-2 gap-4`}
+      className={`px-6 py-4 rounded-2xl shadow-2xl bg-white grid lg:grid-cols-[max-content_1fr_max-content] grid-cols-[max-content_1fr] gap-4`}
     >
       <img
         src={event.thumbnail}
-        className="aspect-square w-32 rounded-lg border-4 border-[#e1d3f7] shadow-md max-w-full self-start"
+        className="aspect-square md:w-32 w-24 rounded-lg border-4 border-[#e1d3f7] shadow-md max-w-full self-start"
       />
       <div className="flex flex-col gap-2">
         <h2 className="text-2xl font-medium">{event.performer}</h2>
-        <div className="flex item-center flex-wrap gap-x-3 gap-y-2 max-w-80">
+        <div className="flex item-center flex-wrap md:gap-x-3 gap-x-2 gap-y-2">
           <Pill className="bg-[#f7dad4]">
             <NearMeIcon fontSize="small" />
             {event.venue}
@@ -107,8 +107,8 @@ const MusicEvent = ({ event }) => {
         </span>
       ) : (
         <Button
-          className="flex items-center justify-center bg-gray-950 text-gray-50 rounded-xl shadow-xl py-3 px-3.5 ml-auto focus-visible:ring-2 ring-yellow-400
-        gap-2 self-center lg:col-start-3 col-start-2 outline-none group pressed:scale-95 transition-all"
+          className="flex items-center justify-center bg-gray-950 text-gray-50 rounded-xl shadow-xl md:py-3 md:px-3.5 py-2 px-2.5 ml-auto focus-visible:ring-2 ring-yellow-400
+        gap-2 self-center lg:col-start-3 col-start-2 outline-none group pressed:scale-95 transition-all md:text-base text-sm"
         >
           <ConfirmationNumberIcon
             className="group-hover:animate-wiggle group-hover:animate-infinite group-hover:animate-duration-700 
@@ -124,7 +124,7 @@ const MusicEvent = ({ event }) => {
 const Pill = ({ children, className }) => {
   return (
     <div
-      className={`px-2 py-1 rounded-xl flex items-center justify-center gap-2 font-medium shadow-md ${className}`}
+      className={`px-2 py-1 md:text-base text-sm rounded-xl flex items-center justify-center gap-2 font-medium shadow-md ${className}`}
     >
       {children}
     </div>
