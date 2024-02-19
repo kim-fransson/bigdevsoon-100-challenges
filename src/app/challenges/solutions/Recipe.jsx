@@ -46,7 +46,7 @@ export const Recipe = () => {
       </div>
     </main>
   );
-}
+};
 
 const BannerIcon = ({ Icon, title, value }) => {
   return (

@@ -74,7 +74,7 @@ export const CreateAccount = () => {
       </div>
     </main>
   );
-}
+};
 
 const TextField = ({ label, className, placeholder, Icon, type = "text" }) => {
   let { focusProps, isFocused } = useFocusRing();

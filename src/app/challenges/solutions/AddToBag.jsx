@@ -88,7 +88,7 @@ export const AddToBag = () => {
       </article>
     </main>
   );
-}
+};
 
 const ImageRadio = ({ value }) => {
   return (

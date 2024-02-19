@@ -97,7 +97,7 @@ export const ProfileCard = () => {
       </div>
     </main>
   );
-}
+};
 
 const TextLink = ({ href, children }) => {
   return (

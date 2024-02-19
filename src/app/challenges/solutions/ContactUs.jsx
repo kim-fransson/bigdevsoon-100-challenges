@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Input,
@@ -96,7 +96,7 @@ export const ContactUs = () => {
       </div>
     </main>
   );
-}
+};
 
 const TextField = ({
   description,

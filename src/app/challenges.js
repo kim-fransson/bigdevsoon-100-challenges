@@ -1,4 +1,13 @@
-import { AddToBag, ContactUs, CreateAccount, ImageCarousel, MobileNavigation, MusicEvents, ProfileCard, Recipe } from "./challenges/solutions";
+import {
+  AddToBag,
+  ContactUs,
+  CreateAccount,
+  ImageCarousel,
+  MobileNavigation,
+  MusicEvents,
+  ProfileCard,
+  Recipe,
+} from "./challenges/solutions";
 
 export const challenges = [
   { day: 1, title: "Profile Card", solution: <ProfileCard /> },

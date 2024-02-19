@@ -67,7 +67,7 @@ export const MobileNavigation = () => {
       </div>
     </main>
   );
-}
+};
 
 const Item = ({ Icon, text }) => {
   return (

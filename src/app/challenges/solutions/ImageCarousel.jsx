@@ -47,7 +47,7 @@ export const ImageCarousel = () => {
       </div>
     </main>
   );
-}
+};
 
 const ActiveImage = ({ src, nextImage, previousImage }) => {
   return (

@@ -72,7 +72,7 @@ export const MusicEvents = () => {
       </div>
     </main>
   );
-}
+};
 
 const MusicEvent = ({ event }) => {
   return (
