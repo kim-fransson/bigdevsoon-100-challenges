@@ -6,4 +6,5 @@ export const challenges = [
   { id: 5, title: "Recipe" },
   { id: 6, title: "Image Carousel" },
   { id: 7, title: "Create Account" },
+  { id: 8, title: "Music events" },
 ];
