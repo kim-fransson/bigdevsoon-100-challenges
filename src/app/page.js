@@ -11,22 +11,22 @@ export default function Home() {
         BigDevSoon 100 Challenges
       </h1>
       <div className="flex flex-wrap gap-8">
-        {challenges.map(({ id, title }) => (
-          <ChallengeCard key={id} id={id} title={title} />
+        {challenges.map(({ day, title }) => (
+          <ChallengeCard key={day} day={day} title={title} />
         ))}
       </div>
     </main>
   );
 }
 
-const ChallengeCard = ({ id, title }) => {
+const ChallengeCard = ({ day, title }) => {
   return (
     <Link
       className="max-w-xs bg-gray-100 p-4 rounded-lg shadow-lg transition-all hover:scale-110 focus-visible:scale-110 focus-visible:ring-4 ring-amber-500 outline-none"
-      href={`/challenges/${id}`}
+      href={`/challenges/${day}`}
     >
       <h2 className="text-xl font-medium">
-        <span className="text-sky-700 font-semibold">{`#${id} `}</span>
+        <span className="text-sky-700 font-semibold">{`#${day} `}</span>
         <span className="text-gray-900 font-medium">{title}</span>
       </h2>
     </Link>

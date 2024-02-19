@@ -12,15 +12,13 @@ import {
 } from "react-aria-components";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Montserrat } from "next/font/google";
-import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export default function ContactUs() {
-  useDocumentTitle(`Day 4 of 100`);
+export const ContactUs = () => {
   return (
     <main
       className={`min-h-dvh overflow-clip grid items-center justify-center bg-gradient-to-t from-[#470028] via-[#451480] to-[#4628d6] ${montserrat.className}`}

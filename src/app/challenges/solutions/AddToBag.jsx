@@ -6,7 +6,6 @@ import { Lora } from "next/font/google";
 import { useState } from "react";
 import { Button, RadioGroup, Label, Radio } from "react-aria-components";
 import { twMerge } from "tailwind-merge";
-import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const images = [
   "/challenges/2/image-1.png",
@@ -17,9 +16,8 @@ const sizes = ["s", "m", "l", "xl", "xxl"];
 
 const lora = Lora({ subsets: ["latin"], weight: ["variable"] });
 
-export default function AddToBag() {
+export const AddToBag = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
-  useDocumentTitle(`Day 2 of 100`);
 
   return (
     <main

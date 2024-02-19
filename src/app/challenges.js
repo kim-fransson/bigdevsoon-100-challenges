@@ -1,10 +1,12 @@
+import { AddToBag, ContactUs, CreateAccount, ImageCarousel, MobileNavigation, MusicEvents, ProfileCard, Recipe } from "./challenges/solutions";
+
 export const challenges = [
-  { id: 1, title: "Profile Card" },
-  { id: 2, title: "Add To Bag" },
-  { id: 3, title: "Mobile Navigation" },
-  { id: 4, title: "Contact Us" },
-  { id: 5, title: "Recipe" },
-  { id: 6, title: "Image Carousel" },
-  { id: 7, title: "Create Account" },
-  { id: 8, title: "Music events" },
+  { day: 1, title: "Profile Card", solution: <ProfileCard /> },
+  { day: 2, title: "Add To Bag", solution: <AddToBag /> },
+  { day: 3, title: "Mobile Navigation", solution: <MobileNavigation /> },
+  { day: 4, title: "Contact Us", solution: <ContactUs /> },
+  { day: 5, title: "Recipe", solution: <Recipe /> },
+  { day: 6, title: "Image Carousel", solution: <ImageCarousel /> },
+  { day: 7, title: "Create Account", solution: <CreateAccount /> },
+  { day: 8, title: "Music events", solution: <MusicEvents /> },
 ];

@@ -3,7 +3,6 @@ import { useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Button, ListBox, ListBoxItem } from "react-aria-components";
-import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const images = [
   "/challenges/6/1.png",
@@ -22,9 +21,7 @@ const images = [
   "/challenges/6/14.png",
 ];
 
-export default function ImageCarousel() {
-  useDocumentTitle(`Day 6 of 100`);
-
+export const ImageCarousel = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const nextImage = () => {
     setActiveImageIndex((curr) => (curr + 1) % images.length);

@@ -8,15 +8,13 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PetsIcon from "@mui/icons-material/Pets";
 import { Button as AriaButton } from "react-aria-components";
-import { useDocumentTitle } from "@uidotdev/usehooks";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
 });
 
-export default function ProfileCard() {
-  useDocumentTitle(`Day 1 of 100`);
+export const ProfileCard = () => {
   return (
     <main
       className={`bg-[#eff3c0] flex h-dvh flex-col justify-center items-center text-gray-900 ${roboto.className}`}
