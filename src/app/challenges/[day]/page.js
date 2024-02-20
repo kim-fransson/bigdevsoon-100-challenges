@@ -8,5 +8,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default function Challenge({ params }) {
-  return challenges[params.day - 1].solution;
+  const Solution = challenges[params.day - 1].solution
+  return <Solution />;
 }
