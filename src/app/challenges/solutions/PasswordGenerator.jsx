@@ -12,7 +12,7 @@ import {
 import { twMerge } from "tailwind-merge";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CachedIcon from "@mui/icons-material/Cached";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -30,9 +30,11 @@ const initialSettingsState = {
 
 export const PasswordGenerator = () => {
   const [settings, setSettings] = useObjectState(initialSettingsState);
-  const [generatedPassword, setGeneratedPassword] = useState(
-    generatePassword(settings),
-  );
+  const [generatedPassword, setGeneratedPassword] = useState();
+
+  useEffect(() => {
+    setGeneratedPassword(generatePassword(settings))
+  }, [settings])
 
   const disableGeneratePassword = useMemo(() => {
     return (
@@ -142,8 +144,8 @@ const LengthSlider = ({ className, characterLength, onChange }) => {
   return (
     <Slider
       aria-label="change password length"
-      maxValue={32}
-      minValue={1}
+      maxValue={64}
+      minValue={8}
       value={characterLength}
       onChange={onChange}
       className={className}
@@ -180,7 +182,7 @@ const LengthSlider = ({ className, characterLength, onChange }) => {
             </div>
           )}
         </SliderTrack>
-        <span className="right-2.5 top-1/2 -translate-y-1/2 absolute">32</span>
+        <span className="right-2.5 top-1/2 -translate-y-1/2 absolute">64</span>
       </div>
     </Slider>
   );
