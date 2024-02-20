@@ -4,5 +4,6 @@ export * from "./CreateAccount";
 export * from "./ImageCarousel";
 export * from "./MobileNavigation";
 export * from "./MusicEvents";
+export * from "./PasswordGenerator";
 export * from "./ProfileCard";
 export * from "./Recipe";
