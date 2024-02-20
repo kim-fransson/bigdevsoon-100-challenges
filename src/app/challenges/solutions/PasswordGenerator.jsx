@@ -49,7 +49,7 @@ export const PasswordGenerator = () => {
 
   return (
     <main className={`min-h-dvh flex justify-center items-center md:bg-[#f7e8ff] bg-[#090212] text-[#f3f2f4] ${lato.className}`}>
-      <div className="bg-[#090212] md:rounded-xl md:shadow-2xl px-4 py-8 flex flex-col md:max-w-md w-full">
+      <div className="bg-[#090212] md:rounded-xl md:shadow-2xl p-8 flex flex-col md:max-w-md w-full">
         <h2 className="font-bold text-3xl">Generate password</h2>
 
         <GeneratedPassword
