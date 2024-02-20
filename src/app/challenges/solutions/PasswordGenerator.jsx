@@ -34,7 +34,7 @@ export const PasswordGenerator = () => {
 
   useEffect(() => {
     setGeneratedPassword(generatePassword(settings))
-  }, [settings])
+  }, [])
 
   const disableGeneratePassword = useMemo(() => {
     return (
