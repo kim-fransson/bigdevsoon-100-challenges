@@ -12,6 +12,8 @@ import { Checkbox, CheckboxGroup, Label } from "react-aria-components";
 
 import { Fredoka } from "next/font/google";
 
+import IcedCoffeImg from "../../../../public/challenges/5/iced-coffee.png"
+
 const fredoka = Fredoka({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -24,8 +26,8 @@ export const Recipe = () => {
     >
       <div className="grid lg:grid-cols-2 max-w-6xl lg:rounded-xl lg:shadow-lg bg-white overflow-clip relative">
         <div className="relative lg:h-[750px] h-[500px] overflow-clip">
-          <img
-            src="/challenges/5/iced-coffee.png"
+          <Image
+            src={IcedCoffeImg}
             alt="iced coffee"
             className="max-w-full object-cover"
           />

@@ -7,3 +7,4 @@ export * from "./MusicEvents";
 export * from "./PasswordGenerator";
 export * from "./ProfileCard";
 export * from "./Recipe";
+export * from "./SignUp";
