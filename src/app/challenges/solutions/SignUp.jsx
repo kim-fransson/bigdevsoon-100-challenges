@@ -115,7 +115,7 @@ const TextField = ({ label, type = "text", passwordField }) => {
   return (
     <AriaTextField
       onChange={setValue}
-      type={passwordField ? (hidePassword ? "text" : "password") : type}
+      type={passwordField ? (hidePassword ? "password" : "text") : type}
       className={twMerge(
         "border-2 border-[#cdcdcd] transition-all p-2 rounded-lg relative",
         isFocused ? "border-[#4467f8]" : "",
