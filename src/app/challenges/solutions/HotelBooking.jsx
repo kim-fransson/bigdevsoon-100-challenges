@@ -27,7 +27,6 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { tv } from "tailwind-variants";
 import { today, getLocalTimeZone } from '@internationalized/date';
 import { Fredoka } from "next/font/google";
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { useState } from "react";
 
 const fredoka = Fredoka({
@@ -52,7 +51,7 @@ const cell = tv({
 export const HotelBooking = () => {
   return (
     <main className={`min-h-dvh flex justify-center items-center bg-[#e8b389] text-gray-950 ${fredoka.className}`}>
-      <div className="bg-[#f2f2f2] md:rounded-2xl md:min-h-0 min-h-dvh max-w-5xl shadow-2xl p-6 gap-8 grid md:grid-cols-[0.5fr_1fr]
+      <div className="bg-[#f2f2f2] md:rounded-2xl md:min-h-0 min-h-dvh max-w-4xl shadow-2xl p-6 gap-8 grid md:grid-cols-[0.5fr_1fr]
       ">
         <BookingForm className="md:order-1 order-2" />
         <ImageGallery className="md:order-2 order-1" />
@@ -194,9 +193,6 @@ const Option = (props) => {
 };
 
 const DateRangePicker = ({ ...props }) => {
-  const isMediumDevice = useMediaQuery(
-    "only screen and (min-width : 768px)"
-  );
   return (
     <AriaDateRangePicker
       {...props} minValue={today(getLocalTimeZone())}>
@@ -228,47 +224,56 @@ const DateRangePicker = ({ ...props }) => {
 
         </div>
       </Group>
-      <Popover placement={isMediumDevice ? "right top" : "bottom"} className="entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out">
-        <Dialog>
-          <RangeCalendar className="bg-[#f2f2f2]/90 backdrop-blur-sm outline-none p-4 shadow-md rounded-lg max-w-full w-fit select-none">
-            <header className="flex items-center gap-4 mb-4">
-              <Button slot="previous" className="disabled:text-gray-400 disabled:cursor-default outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full hover:bg-[#ff8a00]/20 transition-all">
-                <ArrowDropDownIcon className="rotate-90" />
-              </Button>
-              <Heading className="font-medium flex-1 text-center" />
-              <Button slot="next" className="outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full hover:bg-[#ff8a00]/20 transition-all">
-                <ArrowDropDownIcon className="-rotate-90" />
-              </Button>
-            </header>
-            <CalendarGrid className="[&_td]:px-0">
-              <CalendarGridHeader>
-                {(day) => (
-                  <CalendarHeaderCell className="text-sm text-gray-800 font-semibold">
-                    {day}
-                  </CalendarHeaderCell>
-                )}
-              </CalendarGridHeader>
-              <CalendarGridBody>
-                {(date) => <CalendarCell date={date} className="group cursor-pointer w-8 h-8 text-sm outline outline-0 outside-month:hidden 
-                    focus-visible:outline-[#ff8a00] disabled:cursor-default focus-visible:outline-2 outline-offset-1 selected:bg-[#ff8a00]/20 
-                    forced-colors:selected:bg-[Highlight] [td:first-child_&]:rounded-s-lg selection-start:rounded-s-lg [td:last-child_&]:rounded-e-lg 
-                    selection-end:rounded-e-lg focus-visible:rounded-lg disabled:text-gray-400">
-                  {({ formattedDate, isSelected, isSelectionStart, isSelectionEnd, isFocusVisible, isDisabled }) =>
-                    <span
-                      className={cell({
-                        selectionState: isSelected && (isSelectionStart || isSelectionEnd) ? 'cap' : isSelected ? 'middle' : 'none',
-                        isDisabled,
-                        isFocusVisible
-                      })}>
-                      {formattedDate}
-                    </span>
-                  }
-                </CalendarCell>}
-              </CalendarGridBody>
-            </CalendarGrid>
-          </RangeCalendar>
-        </Dialog>
+      <Popover placement="right top" className="hidden md:block entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out">
+        <RangedCalendarDialog />
+      </Popover>
+      <Popover placement="bottom" className="block md:hidden entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out">
+        <RangedCalendarDialog />
       </Popover>
     </AriaDateRangePicker>
   );
 };
+
+const RangedCalendarDialog = () => {
+  return (
+    <Dialog>
+      <RangeCalendar className="bg-[#f2f2f2]/90 backdrop-blur-sm outline-none p-4 shadow-md rounded-lg max-w-full w-fit select-none">
+        <header className="flex items-center gap-4 mb-4">
+          <Button slot="previous" className="disabled:text-gray-400 disabled:cursor-default outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full hover:bg-[#ff8a00]/20 transition-all">
+            <ArrowDropDownIcon className="rotate-90" />
+          </Button>
+          <Heading className="font-medium flex-1 text-center" />
+          <Button slot="next" className="outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full hover:bg-[#ff8a00]/20 transition-all">
+            <ArrowDropDownIcon className="-rotate-90" />
+          </Button>
+        </header>
+        <CalendarGrid className="[&_td]:px-0">
+          <CalendarGridHeader>
+            {(day) => (
+              <CalendarHeaderCell className="text-sm text-gray-800 font-semibold">
+                {day}
+              </CalendarHeaderCell>
+            )}
+          </CalendarGridHeader>
+          <CalendarGridBody>
+            {(date) => <CalendarCell date={date} className="group cursor-pointer w-8 h-8 text-sm outline outline-0 outside-month:hidden 
+                    focus-visible:outline-[#ff8a00] disabled:cursor-default focus-visible:outline-2 outline-offset-1 selected:bg-[#ff8a00]/20 
+                    forced-colors:selected:bg-[Highlight] [td:first-child_&]:rounded-s-lg selection-start:rounded-s-lg [td:last-child_&]:rounded-e-lg 
+                    selection-end:rounded-e-lg focus-visible:rounded-lg disabled:text-gray-400">
+              {({ formattedDate, isSelected, isSelectionStart, isSelectionEnd, isFocusVisible, isDisabled }) =>
+                <span
+                  className={cell({
+                    selectionState: isSelected && (isSelectionStart || isSelectionEnd) ? 'cap' : isSelected ? 'middle' : 'none',
+                    isDisabled,
+                    isFocusVisible
+                  })}>
+                  {formattedDate}
+                </span>
+              }
+            </CalendarCell>}
+          </CalendarGridBody>
+        </CalendarGrid>
+      </RangeCalendar>
+    </Dialog>
+  )
+}
