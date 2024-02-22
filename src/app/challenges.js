@@ -23,5 +23,5 @@ export const challenges = [
   { day: 8, title: "Music events", solution: MusicEvents },
   { day: 9, title: "Password generator", solution: PasswordGenerator },
   { day: 10, title: "SignUp", solution: SignUp },
-  // { day: 11, title: "HotelBooking", solution: HotelBooking },
+  { day: 11, title: "HotelBooking", solution: HotelBooking },
 ];
