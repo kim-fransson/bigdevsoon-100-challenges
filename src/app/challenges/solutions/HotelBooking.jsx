@@ -52,7 +52,7 @@ const cell = tv({
 export const HotelBooking = () => {
   return (
     <main className={`min-h-dvh flex justify-center items-center bg-[#e8b389] text-gray-950 ${fredoka.className}`}>
-      <div className="bg-[#f2f2f2] md:rounded-2xl md:min-h-0 min-h-dvh max-w-5xl shadow-2xl px-4 py-6 gap-4 grid md:grid-cols-[0.5fr_1fr]
+      <div className="bg-[#f2f2f2] md:rounded-2xl md:min-h-0 min-h-dvh max-w-5xl shadow-2xl p-6 gap-8 grid md:grid-cols-[0.5fr_1fr]
       ">
         <BookingForm className="md:order-1 order-2" />
         <ImageGallery className="md:order-2 order-1" />
