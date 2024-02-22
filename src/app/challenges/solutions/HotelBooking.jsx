@@ -64,13 +64,6 @@ export const HotelBooking = () => {
 const BookingForm = ({ className }) => {
   const now = today(getLocalTimeZone());
 
-  const options = [
-    { name: '0' },
-    { name: '1' },
-    { name: '2' },
-    { name: '3' },
-    { name: '4' },
-  ];
   const [numberOfChildren, setNumberOfChildren] = useState("0");
   const [numberOfAdults, setNumberOfAdults] = useState("1");
 
@@ -84,7 +77,12 @@ const BookingForm = ({ className }) => {
 
         <Select
           label="Adults"
-          items={options.splice(1, options.length)}
+          items={[
+            { name: '1' },
+            { name: '2' },
+            { name: '3' },
+            { name: '4' },
+          ]}
           selectedKey={numberOfAdults}
           onSelectionChange={selected => setNumberOfAdults(selected)}>
           {item => <Option id={item.name}>{item.name}</Option>}
@@ -92,8 +90,15 @@ const BookingForm = ({ className }) => {
 
         <Select
           label="Children"
-          items={options}
+          items={[
+            { name: '0' },
+            { name: '1' },
+            { name: '2' },
+            { name: '3' },
+            { name: '4' },
+          ]}
           selectedKey={numberOfChildren}
+          defaultOpen
           onSelectionChange={selected => setNumberOfChildren(selected)}>
           {item => <Option id={item.name}>{item.name}</Option>}
         </Select>
@@ -201,7 +206,7 @@ const DateRangePicker = ({ ...props }) => {
           <p className="capitalize font-semibold cursor-pointer">Check In</p>
           <div className="bg-[#e4e4e4] shadow-md flex justify-between  p-2 rounded-lg outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] outline-offset-2">
             <DateInput slot="start" className="flex">
-              {(segment) => <DateSegment className="outline-[#ff8a00] focus-visible:outline-2 focus-visible:outline" segment={segment} />}
+              {(segment) => <DateSegment className="focus:bg-[#ff8a00] px-0.5 focus:text-white rounded-sm outline-none" segment={segment} />}
             </DateInput>
             <Button className="outline-none group focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full">
               <CalendarMonthIcon className={`group-hover:animate-jump group-hover:animate-once group-hover:animate-duration-[400ms] 
@@ -214,7 +219,7 @@ const DateRangePicker = ({ ...props }) => {
           <p className="capitalize font-semibold cursor-pointer">Check Out</p>
           <div className="bg-[#e4e4e4] flex shadow-md justify-between  p-2 rounded-lg outline-none focus-visible:outline-2 focus-visible:outline-[#ff8a00] outline-offset-2">
             <DateInput slot="end" className="flex">
-              {(segment) => <DateSegment segment={segment} className="outline-[#ff8a00] focus-visible:outline-2 focus-visible:outline" />}
+              {(segment) => <DateSegment segment={segment} className="focus:bg-[#ff8a00] px-0.5 focus:text-white rounded-sm outline-none" />}
             </DateInput>
             <Button className="outline-none group focus-visible:outline-2 focus-visible:outline-[#ff8a00] rounded-full">
               <CalendarMonthIcon className={`group-hover:animate-jump group-hover:animate-once group-hover:animate-duration-[400ms] 
