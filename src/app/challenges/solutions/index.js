@@ -1,6 +1,7 @@
 export * from "./AddToBag";
 export * from "./ContactUs";
 export * from "./CreateAccount";
+export * from "./HotelBooking"
 export * from "./ImageCarousel";
 export * from "./MobileNavigation";
 export * from "./MusicEvents";
