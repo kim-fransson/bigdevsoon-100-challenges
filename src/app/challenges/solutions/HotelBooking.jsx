@@ -70,7 +70,7 @@ const BookingForm = ({ className }) => {
   return (
     <form className={`grid items-start ${className}`}>
       <div className="grid grid-cols-2 gap-4">
-        <DateRangePicker className="col-span-full" shouldCloseOnSelect={false} defaultOpen={true} defaultValue={{
+        <DateRangePicker className="col-span-full" shouldCloseOnSelect={false} defaultValue={{
           start: now,
           end: now.add({ days: 7 })
         }} />
@@ -98,7 +98,6 @@ const BookingForm = ({ className }) => {
             { name: '4' },
           ]}
           selectedKey={numberOfChildren}
-          defaultOpen
           onSelectionChange={selected => setNumberOfChildren(selected)}>
           {item => <Option id={item.name}>{item.name}</Option>}
         </Select>
