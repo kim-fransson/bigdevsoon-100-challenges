@@ -114,7 +114,7 @@ const ImageGallery = ({ className }) => {
   return (
     <div className={`grid grid-cols-3 gap-x-4 gap-y-6 ${className}`}>
       <div className="relative col-span-full rounded-sm overflow-clip shadow-md">
-        <img className="h-auto max-w-full" src="/challenges/11/main.png" />
+        <img width={650} height={430} className="h-auto max-w-full" src="/challenges/11/main.png" />
         <div className="grid gap-1 text-gray-50 absolute bottom-0 left-0 p-4 bg-black/35">
           <p className="font-semibold">Naupaka Bay Retreat</p>
           <div className="flex items-center gap-2">
@@ -124,14 +124,20 @@ const ImageGallery = ({ className }) => {
         </div>
       </div>
       <img
+        width={200}
+        height={200}
         className="col-span-1 aspect-square rounded-sm shadow-md"
         src="/challenges/11/thumbnail-1.png"
       />
       <img
+        width={200}
+        height={200}
         className="col-span-1 aspect-square rounded-sm shadow-md"
         src="/challenges/11/thumbnail-2.png"
       />
       <img
+        width={200}
+        height={200}
         className="col-span-1 aspect-square rounded-sm shadow-md"
         src="/challenges/11/thumbnail-3.png"
       />
