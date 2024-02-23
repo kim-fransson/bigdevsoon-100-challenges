@@ -8,8 +8,6 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import Image from "next/image";
 import {
   Button,
-  Radio as AriaRadio,
-  RadioGroup,
   ToggleButton,
 } from "react-aria-components";
 
@@ -26,34 +24,44 @@ import { useState } from "react";
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 export const RestaurantReservation = () => {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <main
       className={`min-h-dvh flex items-center justify-center bg-[#edc895] ${ebGaramond.className}`}
     >
-      <div className="max-w-md md:min-h-0 min-h-dvh md:rounded-2xl md:shadow-2xl grid overflow-clip bg-gray-50">
+      <div className="max-w-md md:min-h-0 min-h-dvh md:rounded-2xl md:shadow-2xl grid overflow-hidden  bg-gray-50">
         <div className="relative">
-          <Image
-            src={images[activeImageIndex]}
-            width={800}
-            height={460}
-            alt=""
-          />
+          <div
+            className="flex transition-all duration-1000"
+            style={{ translate: `${(-100 * activeIndex)}%` }}
+          >
+            {images.map((img) => (
+              <Image
+                key={img}
+                src={img}
+                width={800}
+                height={460}
+                alt=""
+                className="object-cover"
+                draggable={false}
+              />
+            ))}
+          </div>
 
-          <RadioGroup
-            onChange={setActiveImageIndex}
-            aria-label="active image"
-            orientation="horizontal"
-            value={activeImageIndex}
+          <div
             className="flex items-center justify-center gap-3 absolute left-0 right-0 bottom-0 text-gray-50 p-4
           bg-gradient-to-b from-transparent from-10% to-black"
           >
-            <Radio value={0} />
-            <Radio value={1} />
-            <Radio value={2} />
-            <Radio value={3} />
-            <Radio value={4} />
-          </RadioGroup>
+            {images.map((img, index) => (
+              <SlideShowButton
+                key={img}
+                active={activeIndex === index}
+                onPress={() => {
+                  setActiveIndex(index);
+                }}
+              />
+            ))}
+          </div>
         </div>
         <div className="px-4 py-8 grid gap-8">
           <div className="flex justify-between items-center">
@@ -100,11 +108,15 @@ export const RestaurantReservation = () => {
   );
 };
 
-const Radio = ({ value }) => (
-  <AriaRadio
-    className="text-gray-50/50 flex items-center justify-center selected:text-gray-50 cursor-pointer focus-visible:outline-2 focus-visible:outline-yellow-400 outline-offset-2 rounded-full outline-none"
-    value={value}
+const SlideShowButton = ({ active, onPress }) => (
+  <Button
+    className={twMerge(
+      `flex items-center justify-center cursor-pointer 
+    focus-visible:outline-2 focus-visible:outline-yellow-400 rounded-full outline-none`,
+      active ? "selected:text-gray-50" : "text-gray-50/50 ",
+    )}
+    onPress={onPress}
   >
     <CircleIcon fontSize="small" />
-  </AriaRadio>
+  </Button>
 );
