@@ -13,12 +13,7 @@ import { twMerge } from "tailwind-merge";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CachedIcon from "@mui/icons-material/Cached";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Lato } from "next/font/google";
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+import { lato } from "@/app/fonts";
 
 const initialSettingsState = {
   includeUppercaseLetters: true,

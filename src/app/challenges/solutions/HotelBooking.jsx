@@ -26,14 +26,10 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { tv } from "tailwind-variants";
 import { today, getLocalTimeZone } from '@internationalized/date';
-import { Fredoka } from "next/font/google";
 import { useState } from "react";
 import { useMediaQuery } from 'usehooks-ts'
+import { fredoka } from "@/app/fonts";
 
-const fredoka = Fredoka({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const cell = tv({
   base: 'w-full h-full flex items-center justify-center rounded-lg font-medium',

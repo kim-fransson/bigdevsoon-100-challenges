@@ -9,17 +9,12 @@ import {
 } from "react-aria-components";
 import EmailIcon from "@mui/icons-material/Email";
 import GoogleIcon from "@mui/icons-material/Google";
-import { Noto_Sans } from "next/font/google";
 import { useFocusRing } from "react-aria";
 import { twMerge } from "tailwind-merge";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { useState, useTransition } from "react";
-
-const notoSans = Noto_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import { useState } from "react";
+import { notoSans } from "@/app/fonts";
 
 export const SignUp = () => {
   return (

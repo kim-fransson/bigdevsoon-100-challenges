@@ -11,12 +11,7 @@ import {
   Button,
 } from "react-aria-components";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import { Montserrat } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+import { montserrat } from "@/app/fonts";
 
 export const ContactUs = () => {
   return (

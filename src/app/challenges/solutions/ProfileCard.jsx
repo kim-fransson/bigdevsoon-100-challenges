@@ -1,6 +1,5 @@
 "use client";
 
-import { Roboto } from "next/font/google";
 import Image from "next/image";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -8,11 +7,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PetsIcon from "@mui/icons-material/Pets";
 import { Button as AriaButton } from "react-aria-components";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
+import { roboto } from "@/app/fonts";
 
 export const ProfileCard = () => {
   return (

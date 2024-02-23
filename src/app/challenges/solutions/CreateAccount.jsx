@@ -14,13 +14,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useFocusRing } from "react-aria";
 import { useState } from "react";
-
-import { Hind } from "next/font/google";
-
-const hind = Hind({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import { hind } from "@/app/fonts";
 
 export const CreateAccount = () => {
   return (

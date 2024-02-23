@@ -4,12 +4,7 @@ import { Button } from "react-aria-components";
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import NearMeIcon from "@mui/icons-material/NearMe";
 import EventNoteIcon from "@mui/icons-material/EventNote";
-import { Fredoka } from "next/font/google";
-
-const fredoka = Fredoka({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import { fredoka } from "@/app/fonts";
 
 const events = [
   {

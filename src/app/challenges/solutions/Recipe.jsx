@@ -9,15 +9,8 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { Checkbox, CheckboxGroup, Label } from "react-aria-components";
-
-import { Fredoka } from "next/font/google";
-
+import { fredoka } from "@/app/fonts";
 import IcedCoffeImg from "../../../../public/challenges/5/iced-coffee.png"
-
-const fredoka = Fredoka({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export const Recipe = () => {
   return (

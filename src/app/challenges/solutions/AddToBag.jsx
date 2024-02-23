@@ -1,7 +1,7 @@
 "use client";
 
+import { lora } from "@/app/fonts";
 import Image from "next/image";
-import { Lora } from "next/font/google";
 
 import { useState } from "react";
 import { Button, RadioGroup, Label, Radio } from "react-aria-components";
@@ -14,7 +14,6 @@ const images = [
 ];
 const sizes = ["s", "m", "l", "xl", "xxl"];
 
-const lora = Lora({ subsets: ["latin"], weight: ["variable"] });
 
 export const AddToBag = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
