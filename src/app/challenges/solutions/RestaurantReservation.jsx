@@ -30,7 +30,7 @@ export const RestaurantReservation = () => {
       className={`min-h-dvh flex items-center justify-center bg-[#edc895] ${ebGaramond.className}`}
     >
       <div className="max-w-md md:min-h-0 min-h-dvh md:rounded-2xl md:shadow-2xl grid overflow-hidden  bg-gray-50">
-        <div className="relative">
+        <div className="relative bg-black">
           <div
             className="flex transition-all duration-1000"
             style={{ translate: `${(-100 * activeIndex)}%` }}
