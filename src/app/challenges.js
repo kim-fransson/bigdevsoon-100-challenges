@@ -12,6 +12,7 @@ import {
   RestaurantReservation,
   SignUp,
 } from "./challenges/solutions";
+import { TaskBoard } from "./challenges/solutions/TaskBoard";
 
 export const challenges = [
   { day: 1, title: "Profile Card", solution: ProfileCard },
@@ -24,6 +25,7 @@ export const challenges = [
   { day: 8, title: "Music events", solution: MusicEvents },
   { day: 9, title: "Password generator", solution: PasswordGenerator },
   { day: 10, title: "SignUp", solution: SignUp },
-  { day: 11, title: "HotelBooking", solution: HotelBooking },
-  { day: 12, title: "RestaurantReservation", solution: RestaurantReservation },
+  { day: 11, title: "Hotel Booking", solution: HotelBooking },
+  { day: 12, title: "Restaurant Reservation", solution: RestaurantReservation },
+  { day: 13, title: "Task Board", solution: TaskBoard },
 ];
