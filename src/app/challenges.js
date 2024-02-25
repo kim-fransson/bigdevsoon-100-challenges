@@ -10,9 +10,10 @@ import {
   ProfileCard,
   Recipe,
   RestaurantReservation,
+  ShoppingList,
   SignUp,
+  TaskBoard
 } from "./challenges/solutions";
-import { TaskBoard } from "./challenges/solutions/TaskBoard";
 
 export const challenges = [
   { day: 1, title: "Profile Card", solution: ProfileCard },
@@ -28,4 +29,5 @@ export const challenges = [
   { day: 11, title: "Hotel Booking", solution: HotelBooking },
   { day: 12, title: "Restaurant Reservation", solution: RestaurantReservation },
   { day: 13, title: "Task Board", solution: TaskBoard },
+  { day: 14, title: "Shopping List", solution: ShoppingList },
 ];
