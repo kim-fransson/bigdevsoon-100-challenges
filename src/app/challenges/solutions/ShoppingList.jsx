@@ -92,7 +92,7 @@ export const ShoppingList = () => {
     <main
       className={`min-h-dvh flex justify-center items-center lg:p-8 p-4 bg-gradient-radial from-[#d8f9f9] to-[#afdcdc] ${fredoka.className}`}
     >
-      <div className="flex lg:flex-row flex-col lg:gap-8 gap-4">
+      <div className="grid lg:grid-cols-[minmax(550px,_1fr)_minmax(200px,_400px)] lg:gap-8 gap-4">
         <ProductList products={products} setProducts={setProducts} />
         <div className="flex flex-col lg:gap-8 gap-4">
           <OrderSummary products={products} />
@@ -178,7 +178,7 @@ const PromoCode = ({ className }) => {
           placeholder="Enter promo code"
           className={twMerge(
             focusVisible(),
-            "border-2 border-gray-500 rounded-md px-3 py-2 truncate font-medium",
+            "border-2 border-gray-500 rounded-md px-3 py-2 truncate font-medium w-full",
           )}
         />
       </TextField>
