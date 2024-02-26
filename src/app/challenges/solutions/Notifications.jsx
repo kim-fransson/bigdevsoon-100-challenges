@@ -77,9 +77,7 @@ const button = tv({
       icon: [
         "rounded-full text-gray-900 size-8 hover:bg-indigo-600 hover:text-gray-50",
       ],
-      subtile: [
-        "text-gray-500 hover:text-indigo-800",
-      ],
+      subtile: ["text-gray-500 hover:text-indigo-800"],
     },
     size: {
       small: ["px-2 py-1 text-sm"],
@@ -161,14 +159,6 @@ export const NotificationsCard = () => {
               imageSrc="/challenges/15/gandalf.png"
               variant="mention"
             />
-            <div
-              className={twMerge(
-                badge({ variant: "mention" }),
-                "absolute -right-1 -top-0",
-              )}
-            >
-              <ChatIcon className="size-3" />
-            </div>
           </div>
           <div className="grid">
             <p>
@@ -284,7 +274,7 @@ const AvatarWithBadge = ({ icon: Icon, imageSrc, variant }) => {
         className={avatar()}
       />
       <div className={twMerge(badge({ variant }), "absolute -right-1 -top-0")}>
-        <Icon className="size-3" />
+        <Icon fontSize="" />
       </div>
     </div>
   );
