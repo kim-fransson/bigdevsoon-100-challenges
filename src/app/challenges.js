@@ -6,13 +6,14 @@ import {
   ImageCarousel,
   MobileNavigation,
   MusicEvents,
+  Notifications,
   PasswordGenerator,
   ProfileCard,
   Recipe,
   RestaurantReservation,
   ShoppingList,
   SignUp,
-  TaskBoard
+  TaskBoard,
 } from "./challenges/solutions";
 
 export const challenges = [
@@ -30,4 +31,5 @@ export const challenges = [
   { day: 12, title: "Restaurant Reservation", solution: RestaurantReservation },
   { day: 13, title: "Task Board", solution: TaskBoard },
   { day: 14, title: "Shopping List", solution: ShoppingList },
+  { day: 15, title: "Notifications", solution: Notifications },
 ];

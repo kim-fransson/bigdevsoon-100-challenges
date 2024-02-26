@@ -12,3 +12,4 @@ export * from "./SignUp";
 export * from "./RestaurantReservation"
 export * from "./ShoppingList"
 export * from "./TaskBoard"
+export * from "./Notifications"
