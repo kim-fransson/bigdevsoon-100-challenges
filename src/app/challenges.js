@@ -33,5 +33,5 @@ export const challenges = [
   { day: 13, title: "Task Board", solution: TaskBoard },
   { day: 14, title: "Shopping List", solution: ShoppingList },
   { day: 15, title: "Notifications", solution: Notifications },
-  { day: 16, title: "FurFriends", solution: FurFriends },
+  { day: 16, title: "Fur Friends", solution: FurFriends },
 ];

@@ -84,14 +84,14 @@ export const FurFriends = () => {
 
           <GridList
             aria-label="fur friends"
-            selectionMode="single"
             className="sm:max-h-[500px] overflow-auto no-scrollbar -mx-4"
+            items={dogs}
             onAction={(key) => {
               setActiveDog(dogs.find((dog) => dog.name === key));
               setShowModal(true);
             }}
           >
-            {dogs.map((dog) => (
+            {(dog) => (
               <GridListItem
                 id={dog.name}
                 key={dog.name}
@@ -105,7 +105,7 @@ export const FurFriends = () => {
               >
                 <DogItem dog={dog} />
               </GridListItem>
-            ))}
+            )}
           </GridList>
         </div>
         <DogModal
@@ -121,7 +121,13 @@ export const FurFriends = () => {
 const DogItem = ({ dog }) => {
   return (
     <div className="grid grid-cols-[max-content_1fr]">
-      <Image width={120} height={120} src={dog.thumbnail} alt="" className="rounded-2xl size-32" />
+      <Image
+        width={120}
+        height={120}
+        src={dog.thumbnail}
+        alt=""
+        className="rounded-2xl size-32"
+      />
       <div className="flex flex-col justify-around px-4 py-2">
         <div className="text-xl font-semibold flex items-center gap-1">
           {dog.name}
@@ -193,9 +199,17 @@ const DogModal = ({ activeDog, isOpen, setIsOpen }) => {
           `}
       >
         <Dialog aria-label="dog details" className="outline-none">
-          <div className={card({ className: "grid sm:grid-cols-2 sm:flex-row" })}>
+          <div
+            className={card({ className: "grid sm:grid-cols-2 sm:flex-row" })}
+          >
             <div className="relative overflow-hidden rounded-2xl">
-              <Image width={500} height={500} alt="" src={activeDog?.thumbnail} className="" />
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src={activeDog?.thumbnail}
+                className=""
+              />
               <ToggleButton
                 defaultSelected={activeDog?.favorites}
                 className={button({
