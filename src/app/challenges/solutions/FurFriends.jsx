@@ -181,8 +181,7 @@ const Search = () => {
 const DogModal = ({ activeDog, isOpen, setIsOpen }) => {
   return (
     <ModalOverlay
-      isDismissable={true}
-      isKeyboardDismissDisabled={true}
+      isDismissable
       isOpen={isOpen}
       onOpenChange={setIsOpen}
       className={({ isEntering, isExiting }) => `
