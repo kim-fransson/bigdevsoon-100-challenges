@@ -10,11 +10,12 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import PaidIcon from "@mui/icons-material/Paid";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import {
   Button,
   Dialog,
-  GridList,
+    GridList,
   GridListItem,
   Input,
   Modal,
@@ -69,51 +70,49 @@ export const FurFriends = () => {
     <main
       className={`min-h-dvh flex items-center justify-center bg-teal-50 ${fredoka.className}`}
     >
-      <>
-        <div
-          className={card({
-            class:
-              "max-w-lg w-full min-h-dvh sm:min-h-0 flex flex-col p-4 gap-4 bg-gradient-to-b from-white to-gray-50",
-          })}
-        >
-          <div className="flex items-center gap-2">
-            <PetsIcon fontSize="large" />
-            <h2 className="text-2xl font-semibold">FurEver Friends</h2>
-          </div>
-          <Search />
-
-          <GridList
-            aria-label="fur friends"
-            className="sm:max-h-[500px] overflow-auto no-scrollbar -mx-4"
-            items={dogs}
-            onAction={(key) => {
-              setActiveDog(dogs.find((dog) => dog.name === key));
-              setShowModal(true);
-            }}
-          >
-            {(dog) => (
-              <GridListItem
-                id={dog.name}
-                key={dog.name}
-                textValue={dog.name}
-                className={twMerge(
-                  card({
-                    className: "my-5 mx-4 cursor-pointer hover:bg-pink-50",
-                  }),
-                  item(),
-                )}
-              >
-                <DogItem dog={dog} />
-              </GridListItem>
-            )}
-          </GridList>
+      <div
+        className={card({
+          class:
+            "max-w-lg w-full min-h-dvh sm:min-h-0 flex flex-col p-4 gap-4 bg-gradient-to-b from-white to-gray-50",
+        })}
+      >
+        <div className="flex items-center gap-2">
+          <PetsIcon fontSize="large" />
+          <h2 className="text-2xl font-semibold">FurEver Friends</h2>
         </div>
-        <DogModal
-          activeDog={activeDog}
-          isOpen={showModal}
-          setIsOpen={setShowModal}
-        />
-      </>
+        <Search />
+
+        <GridList
+          aria-label="fur friends"
+          className="sm:max-h-[500px] overflow-auto no-scrollbar -mx-4"
+          items={dogs}
+          onAction={(key) => {
+            setActiveDog(dogs.find((dog) => dog.name === key));
+            setShowModal(true);
+          }}
+        >
+          {(dog) => (
+            <GridListItem
+              id={dog.name}
+              key={dog.name}
+              textValue={dog.name}
+              className={twMerge(
+                card({
+                  className: "my-5 mx-4 cursor-pointer hover:bg-pink-50",
+                }),
+                item(),
+              )}
+            >
+                              <DogItem dog={dog} />
+                          </GridListItem>
+          )}
+        </GridList>
+      </div>
+      <DogModal
+        activeDog={activeDog}
+        isOpen={showModal}
+        setIsOpen={setShowModal}
+      />
     </main>
   );
 };
@@ -182,8 +181,8 @@ const Search = () => {
 const DogModal = ({ activeDog, isOpen, setIsOpen }) => {
   return (
     <ModalOverlay
-      isDismissable
-      isKeyboardDismissDisabled
+      isDismissable={true}
+      isKeyboardDismissDisabled={true}
       isOpen={isOpen}
       onOpenChange={setIsOpen}
       className={({ isEntering, isExiting }) => `
@@ -199,86 +198,97 @@ const DogModal = ({ activeDog, isOpen, setIsOpen }) => {
           `}
       >
         <Dialog aria-label="dog details" className="outline-none">
-          <div
-            className={card({ className: "grid sm:grid-cols-2 sm:flex-row" })}
-          >
-            <div className="relative overflow-hidden rounded-2xl">
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                src={activeDog?.thumbnail}
-                className=""
-              />
-              <ToggleButton
-                defaultSelected={activeDog?.favorites}
-                className={button({
-                  className:
-                    "text-gray-800 rounded-full absolute top-2 right-2",
-                })}
-              >
-                {({ isSelected }) =>
-                  isSelected ? (
-                    <FavoriteIcon className="text-pink-700" />
-                  ) : (
-                    <FavoriteBorderIcon />
-                  )
-                }
-              </ToggleButton>
-            </div>
-            <div className="p-4 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-xl font-semibold flex items-center gap-1">
-                    <h2>{activeDog?.name}</h2>
-                    {activeDog?.gender === "female" && <FemaleIcon />}
-                    {activeDog?.gender === "male" && <MaleIcon />}
-                  </div>
-                  <span className="text-gray-500">{activeDog?.breed}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <FmdGoodIcon className="text-pink-700" />
-                  {activeDog?.distance}
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
-                  <span className="text-gray-900 font-semibold">Age</span>
-                  <span className="text-sm text-gray-700">
-                    {activeDog?.age}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
-                  <span className="text-gray-900 font-semibold">Height</span>
-                  <span className="text-sm text-gray-700">
-                    {activeDog?.height}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
-                  <span className="text-gray-900 font-semibold">Weight</span>
-                  <span className="text-sm text-gray-700">
-                    {activeDog?.weight}
-                  </span>
-                </div>
-              </div>
-
-              <p>{activeDog?.description}</p>
-
-              <div className="flex items-center mt-auto w-full gap-4">
-                <Button className={button({ variant: "donate" })}>
-                  Donate
-                  <PaidIcon />
-                </Button>
-                <Button
-                  className={button({ variant: "adopt", className: "flex-1" })}
+          {({ close }) => (
+            <div
+              className={card({ className: "grid sm:grid-cols-2 sm:flex-row" })}
+            >
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image
+                  width={500}
+                  height={500}
+                  alt=""
+                  src={activeDog?.thumbnail}
+                  className=""
+                />
+                <ToggleButton
+                  defaultSelected={activeDog?.favorites}
+                  className={button({
+                    className:
+                      "text-gray-800 rounded-full absolute top-2 right-2",
+                  })}
                 >
-                  Adopt
-                  <PetsIcon />
+                  {({ isSelected }) =>
+                    isSelected ? (
+                      <FavoriteIcon className="text-pink-700" />
+                    ) : (
+                      <FavoriteBorderIcon />
+                    )
+                  }
+                </ToggleButton>
+                <Button
+                  className={button({ className: "left-2 top-2 absolute" })}
+                  onPress={close}
+                >
+                  <ArrowBackIcon />
                 </Button>
               </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-xl font-semibold flex items-center gap-1">
+                      <h2>{activeDog?.name}</h2>
+                      {activeDog?.gender === "female" && <FemaleIcon />}
+                      {activeDog?.gender === "male" && <MaleIcon />}
+                    </div>
+                    <span className="text-gray-500">{activeDog?.breed}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <FmdGoodIcon className="text-pink-700" />
+                    {activeDog?.distance}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
+                    <span className="text-gray-900 font-semibold">Age</span>
+                    <span className="text-sm text-gray-700">
+                      {activeDog?.age}
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
+                    <span className="text-gray-900 font-semibold">Height</span>
+                    <span className="text-sm text-gray-700">
+                      {activeDog?.height}
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-200 px-3 py-2 rounded-lg">
+                    <span className="text-gray-900 font-semibold">Weight</span>
+                    <span className="text-sm text-gray-700">
+                      {activeDog?.weight}
+                    </span>
+                  </div>
+                </div>
+
+                <p>{activeDog?.description}</p>
+
+                <div className="flex items-center mt-auto w-full gap-4">
+                  <Button className={button({ variant: "donate" })}>
+                    Donate
+                    <PaidIcon />
+                  </Button>
+                  <Button
+                    className={button({
+                      variant: "adopt",
+                      className: "flex-1",
+                    })}
+                  >
+                    Adopt
+                    <PetsIcon />
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </Dialog>
       </Modal>
     </ModalOverlay>
