@@ -15,7 +15,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
   Button,
   Dialog,
-    GridList,
+  GridList,
   GridListItem,
   Input,
   Modal,
@@ -68,12 +68,12 @@ export const FurFriends = () => {
 
   return (
     <main
-      className={`min-h-dvh flex items-center justify-center bg-teal-50 ${fredoka.className}`}
+      className={`min-h-dvh sm:flex sm:items-center sm:justify-center bg-teal-50 ${fredoka.className}`}
     >
       <div
         className={card({
           class:
-            "max-w-lg w-full min-h-dvh sm:min-h-0 flex flex-col p-4 gap-4 bg-gradient-to-b from-white to-gray-50",
+            "sm:max-w-lg sm:w-full sm:min-h-0 flex flex-col p-4 gap-4 bg-gradient-to-b from-white to-gray-50",
         })}
       >
         <div className="flex items-center gap-2">
@@ -103,8 +103,8 @@ export const FurFriends = () => {
                 item(),
               )}
             >
-                              <DogItem dog={dog} />
-                          </GridListItem>
+              <DogItem dog={dog} />
+            </GridListItem>
           )}
         </GridList>
       </div>
@@ -121,11 +121,11 @@ const DogItem = ({ dog }) => {
   return (
     <div className="grid grid-cols-[max-content_1fr]">
       <Image
-        width={120}
-        height={120}
+        width={128}
+        height={128}
         src={dog.thumbnail}
         alt=""
-        className="rounded-2xl size-32"
+        className="rounded-2xl"
       />
       <div className="flex flex-col justify-around px-4 py-2">
         <div className="text-xl font-semibold flex items-center gap-1">
@@ -207,7 +207,6 @@ const DogModal = ({ activeDog, isOpen, setIsOpen }) => {
                   height={500}
                   alt=""
                   src={activeDog?.thumbnail}
-                  className=""
                 />
                 <ToggleButton
                   defaultSelected={activeDog?.favorites}
