@@ -21,30 +21,36 @@ import { useState } from "react";
 
 export const ArticleSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextArticle = () => setActiveIndex((curr) => curr + 1);
+  const prevArticle = () => setActiveIndex((curr) => curr - 1);
+
   return (
     <main
       className={`min-h-dvh items-center justify-center flex bg-amber-100 ${fredoka.className}`}
     >
-      <div className="relative">
-        <Button
-          isDisabled={activeIndex === 0}
-          onPress={() => setActiveIndex(curr => curr - 1)}
-          className="bg-gray-300 outline-none disabled:opacity-50 flex items-center justify-center p-1 rounded-md
-        focus-visible:ring-2 focus-visible:ring-blue-500 transition-all pressed:scale-90 hover:bg-gray-400
-        top-1/2 -translate-y-1/2 absolute -translate-x-full -left-2 shadow-md"
-        >
-          <ArrowBackIosNewIcon />
-        </Button>
-        <Button
-          isDisabled={activeIndex === (articles.length - 1)}
-          onPress={() => setActiveIndex(curr => curr + 1)}
-          className="bg-gray-300 outline-none disabled:opacity-50 flex items-center justify-center p-1 rounded-md
-        focus-visible:ring-2 focus-visible:ring-blue-500 transition-all pressed:scale-90 hover:bg-gray-400
-        top-1/2 -translate-y-1/2 absolute translate-x-full -right-2 shadow-md"
-        >
-          <ArrowForwardIosIcon />
-        </Button>
-        <Article article={articles[activeIndex]} />
+      <div className="flex flex-col gap-2 items-center">
+        <div className="flex items-center gap-2">
+          <Button
+            isDisabled={activeIndex === 0}
+            onPress={prevArticle}
+            className="bg-gray-300 outline-none disabled:opacity-50 flex items-center justify-center p-1 rounded-md
+        focus-visible:ring-2 focus-visible:ring-blue-500 transition-all pressed:scale-90 hover:bg-gray-400 shadow-md"
+          >
+            <ArrowBackIosNewIcon />
+          </Button>
+
+          <Article article={articles[activeIndex]} />
+
+          <Button
+            isDisabled={activeIndex === articles.length - 1}
+            onPress={nextArticle}
+            className="bg-gray-300 outline-none disabled:opacity-50 flex items-center justify-center p-1 rounded-md
+        focus-visible:ring-2 focus-visible:ring-blue-500 transition-all pressed:scale-90 hover:bg-gray-400 shadow-md"
+          >
+            <ArrowForwardIosIcon />
+          </Button>
+        </div>
         <PaginationIndicator
           activeIndex={activeIndex}
           totalItems={articles.length}
@@ -56,7 +62,7 @@ export const ArticleSlider = () => {
 
 const PaginationIndicator = ({ activeIndex, totalItems }) => {
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 translate-y-full -bottom-2 space-x-2">
+    <div className="space-x-2">
       {Array.from({ length: totalItems }, (_, index) => (
         <CircleIcon
           key={index}
