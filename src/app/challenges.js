@@ -1,5 +1,6 @@
 import {
   AddToBag,
+  ArticleSlider,
   ContactUs,
   CreateAccount,
   FurFriends,
@@ -34,4 +35,5 @@ export const challenges = [
   { day: 14, title: "Shopping List", solution: ShoppingList },
   { day: 15, title: "Notifications", solution: Notifications },
   { day: 16, title: "Fur Friends", solution: FurFriends },
+  { day: 17, title: "Article Slider", solution: ArticleSlider },
 ];
