@@ -8,6 +8,7 @@ import { tv } from "tailwind-variants";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { fredoka } from "@/app/fonts";
 
 const radio = tv({
   base: [
@@ -30,7 +31,7 @@ const layout = tv({
     variant: {
       grid: ["grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-4"],
       bento: ["grid grid-cols-12 p-4 gap-4"],
-      list: ["grid max-h-[500px] overflow-auto no-scrollbar"],
+      list: ["grid md:max-h-[500px] overflow-auto no-scrollbar"],
     },
   },
 });
@@ -78,8 +79,8 @@ export const ImagePreview = () => {
   const [activeLayout, setActiveLayout] = useState("grid");
   const AnimatedImage = motion(Image);
   return (
-    <main className={`min-h-dvh flex justify-center items-center bg-[#c5c5c5]`}>
-      <div className="max-w-4xl w-full rounded-lg overflow-hidden">
+    <main className={`min-h-dvh flex justify-center items-center bg-[#c5c5c5] ${fredoka.className}`}>
+      <div className="lg:max-w-4xl w-full md:rounded-lg overflow-hidden">
         <div className="flex px-4 py-2 items-center justify-between bg-[#333331]">
           <h2 className="text-2xl text-[#dfdfdf]">Images</h2>
           <RadioGroup
@@ -95,7 +96,7 @@ export const ImagePreview = () => {
             <Radio className={(states) => radio(states)} value="list">
               <ListIcon />
             </Radio>
-            <div className="w-[2px] bg-[#525250] self-stretch rounded-full" />
+            <div className="w-[2px] bg-[#525250] self-stretch rounded-full md:block hidden" />
             <Radio className={(states) => radio({...states, class: "md:inline-flex hidden"})} value="bento">
               <ViewComfyIcon />
             </Radio>
