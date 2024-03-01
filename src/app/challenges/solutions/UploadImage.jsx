@@ -72,7 +72,9 @@ export const UploadImage = () => {
   }, [activeFile]);
 
   return (
-    <main className={`min-h-dvh bg-indigo-50 flex items-center justify-center ${fredoka.className}`}>
+    <main
+      className={`min-h-dvh bg-indigo-50 flex items-center justify-center ${fredoka.className}`}
+    >
       <div className={card({ class: "max-w-screen-sm w-full gap-4" })}>
         <h2 className="text-xl font-semibold">Upload Photo</h2>
 
@@ -135,13 +137,15 @@ export const File = ({ file, setActiveFile }) => {
   return (
     <div className="p-2 text-gray-700 flex gap-2 border border-gray-400 rounded-2xl">
       {fileSrc && (
-        <Image
-          width={64}
-          height={64}
-          src={fileSrc}
-          className="rounded-2xl"
-          alt=""
-        />
+        <div className="size-16 overflow-hidden rounded-2xl">
+          <Image
+            width={64}
+            height={64}
+            src={fileSrc}
+            className="object-contain"
+            alt=""
+          />
+        </div>
       )}
       <div className="flex flex-col w-full">
         <div className="flex items-center">
@@ -198,7 +202,9 @@ const ConfirmationModal = ({ isOpen, setIsOpen, onDelete, setActiveFile }) => {
         <Dialog aria-label="delete confirmation" className="outline-none">
           {({ close }) => (
             <div className={card({ className: "gap-4 max-w-xs" })}>
-              <p className="font-medium text-gray-800">Are you sure you want to delete uploaded picture?</p>
+              <p className="font-medium text-gray-800">
+                Are you sure you want to delete uploaded picture?
+              </p>
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   onPress={close}
