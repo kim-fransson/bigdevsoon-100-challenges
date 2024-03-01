@@ -6,6 +6,7 @@ import {
   FurFriends,
   HotelBooking,
   ImageCarousel,
+  ImagePreview,
   MobileNavigation,
   MusicEvents,
   Notifications,
@@ -36,4 +37,5 @@ export const challenges = [
   { day: 15, title: "Notifications", solution: Notifications },
   { day: 16, title: "Fur Friends", solution: FurFriends },
   { day: 17, title: "Article Slider", solution: ArticleSlider },
+  { day: 18, title: "Image Preview", solution: ImagePreview },
 ];
