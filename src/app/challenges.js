@@ -17,6 +17,7 @@ import {
   ShoppingList,
   SignUp,
   TaskBoard,
+  UploadImage,
 } from "./challenges/solutions";
 
 export const challenges = [
@@ -38,4 +39,5 @@ export const challenges = [
   { day: 16, title: "Fur Friends", solution: FurFriends },
   { day: 17, title: "Article Slider", solution: ArticleSlider },
   { day: 18, title: "Image Preview", solution: ImagePreview },
+  { day: 19, title: "Upload Photo", solution: UploadImage },
 ];
