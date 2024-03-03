@@ -9,13 +9,20 @@ import {
   Noto_Sans,
   Roboto,
   EB_Garamond,
+  Anton,
 } from "next/font/google";
 
-export const ebGaramond =  EB_Garamond({
+export const anton = Anton({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+export const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap"
-}) 
+  display: "swap",
+});
 
 export const inter = Inter({
   subsets: ["latin"],

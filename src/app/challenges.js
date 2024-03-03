@@ -1,6 +1,7 @@
 import {
   AddToBag,
   ArticleSlider,
+  CardWallet,
   ContactUs,
   CreateAccount,
   FurFriends,
@@ -40,4 +41,5 @@ export const challenges = [
   { day: 17, title: "Article Slider", solution: ArticleSlider },
   { day: 18, title: "Image Preview", solution: ImagePreview },
   { day: 19, title: "Upload Photo", solution: UploadImage },
+  { day: 20, title: "Card Wallet", solution: CardWallet },
 ];
