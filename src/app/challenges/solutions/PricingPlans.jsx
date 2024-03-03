@@ -198,7 +198,7 @@ const PricingPlan = ({ plan, isBilledMonthly }) => {
         </span>
         <span className="text-3xl font-bold">{plan.name}</span>
         <p className="font-semibold text-lg">
-          {`$${isBilledMonthly ? plan.price_per_month : 12 * plan.price_per_month} `}
+          {`$${isBilledMonthly ? plan.price_per_month : (0.75 * plan.price_per_month).toFixed(2)} `}
           <span className="text-sm opacity-60 font-normal">
             {isBilledMonthly ? "/month" : "/year"}
           </span>
