@@ -229,7 +229,7 @@ const Transactions = () => {
 };
 
 const transactionIcon = tv({
-  base: ["size-12 p-2 rounded-lg"],
+  base: ["rounded-lg p-2"],
   variants: {
     category: {
       Travel: ["bg-sky-200 text-sky-700"],
@@ -253,9 +253,9 @@ const transactionBadge = tv({
 const Transaction = ({ transaction }) => {
   return (
     <div className="flex items-center gap-4">
-      <transaction.icon
-        className={transactionIcon({ category: transaction.category })}
-      />
+      <div className={transactionIcon({ category: transaction.category })}>
+        <transaction.icon fontSize="large" />
+      </div>
       <div className="inline-grid">
         <span className="font-semibold">{transaction.category}</span>
         <span className="text-gray-600">{`${transaction.daysAgo} days ago`}</span>
