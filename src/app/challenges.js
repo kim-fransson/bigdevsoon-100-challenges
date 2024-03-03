@@ -12,6 +12,7 @@ import {
   MusicEvents,
   Notifications,
   PasswordGenerator,
+  PricingPlans,
   ProfileCard,
   Recipe,
   RestaurantReservation,
@@ -42,4 +43,5 @@ export const challenges = [
   { day: 18, title: "Image Preview", solution: ImagePreview },
   { day: 19, title: "Upload Photo", solution: UploadImage },
   { day: 20, title: "Card Wallet", solution: CardWallet },
+  { day: 21, title: "Pricing Plans", solution: PricingPlans },
 ];
