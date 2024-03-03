@@ -113,10 +113,14 @@ export const PricingPlans = () => {
       className={`bg-pink-50 min-h-dvh flex items-center justify-center relative ${fredoka.className}`}
     >
       <Overlay />
-      <div className="rounded-xl relative bg-white py-12 px-16 gap-6 grid justify-items-center shadow-xl">
+      <div className="rounded-xl relative bg-white py-12 lg:px-16 px-8 gap-6 grid justify-items-center shadow-xl">
         <h2 className="font-semibold text-lg text-gray-700">Find ideal plan</h2>
         <p className="text-5xl font-semibold">
-          Unlock <span>Your Best-Fit</span> Plan Today
+          Unlock{" "}
+          <span className="text-indigo-700 underline underline-offset-8 decoration-4">
+            Your Best-Fit
+          </span>{" "}
+          Plan Today
         </p>
         <Switch
           isSelected={isBilledMonthly}
