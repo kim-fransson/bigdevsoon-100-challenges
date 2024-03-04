@@ -19,7 +19,7 @@ import { fredoka } from "@/app/fonts";
 
 const page = tv({
   base: [
-    "min-h-dvh text-gray-900 w-full lg:max-w-md md:min-h-0 lg:h-[700px] bg-white md:rounded-2xl p-6",
+    "h-dvh text-gray-900 w-full lg:max-w-md md:min-h-0 lg:h-[700px] bg-white md:rounded-2xl p-6",
   ],
 });
 
@@ -67,7 +67,9 @@ export const Messages = () => {
       <div
         className={page({ class: "relative p-0 overflow-clip md:shadow-2xl" })}
       >
-        <Home setActiveUser={setActiveUser} activeUser={activeUser} />
+        <div className={twMerge()}>
+          <Home setActiveUser={setActiveUser} activeUser={activeUser} />
+        </div>
         <div
           className={twMerge(
             "transition-all absolute inset-0 duration-300",
@@ -169,9 +171,9 @@ const Conversation = ({ user, onBack }) => {
       >
         <ArrowBackIcon />
       </Button>
-      <div className="grid gap-1 justify-items-center">
+      <div className="grid gap-1 justify-items-center items-start auto-rows-min">
         <div className="relative">
-          <div className={avatar({ isOnline: user?.isOnline })}>
+          <div className={avatar()}>
             <Image
               width={56}
               height={56}
@@ -218,7 +220,7 @@ const Message = ({ message, user }) => {
       >
         {message?.sender !== "me" && (
           <div className="relative scale-75">
-            <div className={avatar({ isOnline: user?.isOnline })}>
+            <div className={avatar()}>
               <Image
                 width={56}
                 height={56}
