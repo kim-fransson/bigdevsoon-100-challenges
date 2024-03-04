@@ -8,6 +8,7 @@ import {
   HotelBooking,
   ImageCarousel,
   ImagePreview,
+  Messages,
   MobileNavigation,
   MusicEvents,
   Notifications,
@@ -44,4 +45,5 @@ export const challenges = [
   { day: 19, title: "Upload Photo", solution: UploadImage },
   { day: 20, title: "Card Wallet", solution: CardWallet },
   { day: 21, title: "Pricing Plans", solution: PricingPlans },
+  { day: 22, title: "Messages", solution: Messages },
 ];
