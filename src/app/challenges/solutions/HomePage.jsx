@@ -1,3 +1,5 @@
+"use server";
+
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
