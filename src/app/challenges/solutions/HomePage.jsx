@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
