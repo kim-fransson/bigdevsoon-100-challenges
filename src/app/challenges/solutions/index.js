@@ -20,3 +20,4 @@ export * from "./SignUp";
 export * from "./TaskBoard";
 export * from "./UploadImage";
 export * from "./Messages";
+export * from "./HomePage";

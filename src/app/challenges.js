@@ -5,6 +5,7 @@ import {
   ContactUs,
   CreateAccount,
   FurFriends,
+  HomePage,
   HotelBooking,
   ImageCarousel,
   ImagePreview,
@@ -46,4 +47,5 @@ export const challenges = [
   { day: 20, title: "Card Wallet", solution: CardWallet },
   { day: 21, title: "Pricing Plans", solution: PricingPlans },
   { day: 22, title: "Messages", solution: Messages },
+  { day: 23, title: "Home Page", solution: HomePage },
 ];

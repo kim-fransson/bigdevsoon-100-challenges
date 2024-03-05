@@ -195,7 +195,7 @@ const Conversation = ({ user, onBack }) => {
         ))}
       </div>
 
-      <TextField>
+      <TextField className="self-end">
         <Input
           placeholder="Message"
           className="w-full outline-none focus:border-green-700 border-2 border-gray-300
