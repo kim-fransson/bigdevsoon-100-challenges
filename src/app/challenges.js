@@ -11,6 +11,7 @@ import {
   ImagePreview,
   Messages,
   MobileNavigation,
+  MovieTicket,
   MusicEvents,
   Notifications,
   PasswordGenerator,
@@ -48,4 +49,5 @@ export const challenges = [
   { day: 21, title: "Pricing Plans", solution: PricingPlans },
   { day: 22, title: "Messages", solution: Messages },
   { day: 23, title: "Home Page", solution: HomePage },
+  { day: 24, title: "Movie Ticket", solution: MovieTicket },
 ];
