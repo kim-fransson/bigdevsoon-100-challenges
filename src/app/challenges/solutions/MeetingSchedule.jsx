@@ -29,7 +29,6 @@ import {
   DateSegment,
 } from "react-aria-components";
 import { useState } from "react";
-import { parseDate } from "@internationalized/date";
 
 const badge = tv({
   base: ["rounded-full py-1 px-2 text-center text-gray-50"],
