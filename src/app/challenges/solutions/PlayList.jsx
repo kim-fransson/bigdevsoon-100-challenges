@@ -96,7 +96,7 @@ export const PlayList = () => {
 
 const PlayListInfo = () => {
   return (
-    <div className="grid gap-4 px-4">
+    <div className="grid gap-4 px-4"> 
       <Image
         width={128}
         height={128}
