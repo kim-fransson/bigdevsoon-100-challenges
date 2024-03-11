@@ -42,4 +42,9 @@ body {
   .challenge-24-clip {
     clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
   }
+
+  .curved {
+    border-bottom-left-radius: 100% 20%;
+    border-bottom-right-radius: 100% 20%;
+  }
 }
