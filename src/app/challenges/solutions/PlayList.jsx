@@ -25,9 +25,6 @@ import { useEffect, useState } from "react";
 import { useSound } from "@/app/hooks";
 import { usePress } from "react-aria";
 import { twMerge } from "tailwind-merge";
-import { LayoutGroup, motion } from "framer-motion";
-
-const AnimatedImage = motion(Image);
 
 const styles = tv({
   slots: {
@@ -220,27 +217,22 @@ const CurrentSong = ({ activeSong, setActiveSong }) => {
   };
 
   return (
-    <LayoutGroup>
+    <>
       <div
         className={twMerge(
           "absolute ",
           isExpanded ? "inset-0 backdrop-blur-sm bg-indigo-950/50" : "hidden",
         )}
       />
-      <motion.div
-        layout
-        {...pressProps}
-        className={activeSongItem({ isExpanded })}
-      >
-        <AnimatedImage
-          layout
+      <div {...pressProps} className={activeSongItem({ isExpanded })}>
+        <Image
           width={64}
           height={64}
           src={`/challenges/28/images/${activeSong.image}`}
           alt=""
           className={`rounded-2xl shadow-md w-full ${isExpanded ? "max-w-none" : "max-w-16"}`}
         />
-        <motion.div layout className="flex items-center gap-4 w-full">
+        <div className="flex items-center gap-4 w-full">
           <div>
             <h2 className="font-medium truncate">{activeSong.title}</h2>
             <span className="text-sm opacity-80 truncate">
@@ -259,23 +251,17 @@ const CurrentSong = ({ activeSong, setActiveSong }) => {
               <>{isSelected ? <FavoriteIcon /> : <FavoriteBorderIcon />}</>
             )}
           </ToggleButton>
-        </motion.div>
+        </div>
 
-        <motion.div
-          layout
-          className={`w-full ${isExpanded ? "block" : "hidden"}`}
-        >
+        <div className={`w-full ${isExpanded ? "block" : "hidden"}`}>
           <Progress
             progress={currentTime}
             duration={duration}
             onChange={updateCurrentTime}
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          layout
-          className="flex items-center justify-center gap-4 w-full"
-        >
+        <div className="flex items-center justify-center gap-4 w-full">
           <Button
             onPress={previousSong}
             className={(states) =>
@@ -320,9 +306,9 @@ const CurrentSong = ({ activeSong, setActiveSong }) => {
           >
             <FastForwardIcon fontSize="large" />
           </Button>
-        </motion.div>
-      </motion.div>
-    </LayoutGroup>
+        </div>
+      </div>
+    </>
   );
 };
 
