@@ -18,6 +18,7 @@ import {
   MusicEvents,
   Notifications,
   PasswordGenerator,
+  PlayList,
   PricingPlans,
   ProfileCard,
   Recipe,
@@ -56,4 +57,5 @@ export const challenges = [
   { day: 25, title: "Meeting Schedule", solution: MeetingSchedule },
   { day: 26, title: "Job Board", solution: JobBoard },
   { day: 27, title: "Leaderboards", solution: LeaderBoards },
+  { day: 28, title: "Playlist", solution: PlayList },
 ];

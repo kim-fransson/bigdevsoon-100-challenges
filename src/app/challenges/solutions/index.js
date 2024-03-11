@@ -17,6 +17,7 @@ export * from "./MovieTicket";
 export * from "./MusicEvents";
 export * from "./Notifications";
 export * from "./PasswordGenerator";
+export * from "./PlayList";
 export * from "./PricingPlans";
 export * from "./ProfileCard";
 export * from "./Recipe";
