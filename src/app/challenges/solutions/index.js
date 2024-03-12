@@ -8,6 +8,7 @@ export * from "./HomePage";
 export * from "./HotelBooking";
 export * from "./ImageCarousel";
 export * from "./ImagePreview";
+export * from "./Invoices";
 export * from "./JobBoard";
 export * from "./Leaderboards";
 export * from "./MeetingSchedule";

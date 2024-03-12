@@ -9,6 +9,7 @@ import {
   HotelBooking,
   ImageCarousel,
   ImagePreview,
+  Invoices,
   JobBoard,
   LeaderBoards,
   MeetingSchedule,
@@ -58,4 +59,6 @@ export const challenges = [
   { day: 26, title: "Job Board", solution: JobBoard },
   { day: 27, title: "Leaderboards", solution: LeaderBoards },
   { day: 28, title: "Playlist", solution: PlayList },
+  { day: 29, title: "TBD", solution: undefined },
+  { day: 30, title: "Invoices", solution: Invoices },
 ];
