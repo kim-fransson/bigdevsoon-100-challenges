@@ -28,6 +28,7 @@ import {
   SignUp,
   TaskBoard,
   UploadImage,
+  UserProfile,
   VideoPlayer,
 } from "./challenges/solutions";
 
@@ -62,4 +63,8 @@ export const challenges = [
   { day: 28, title: "Playlist", solution: PlayList },
   { day: 29, title: "Video Player", solution: VideoPlayer },
   { day: 30, title: "Invoices", solution: Invoices },
+  { day: 31, title: "undefined", solution: undefined },
+  { day: 32, title: "undefined", solution: undefined },
+  { day: 33, title: "undefined", solution: undefined },
+  { day: 34, title: "User Profile", solution: UserProfile },
 ];
