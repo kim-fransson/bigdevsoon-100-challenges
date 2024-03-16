@@ -16,6 +16,7 @@ export * from "./Messages";
 export * from "./MobileNavigation";
 export * from "./MovieTicket";
 export * from "./MusicEvents";
+export * from "./Newsletter";
 export * from "./Notifications";
 export * from "./PasswordGenerator";
 export * from "./PlayList";

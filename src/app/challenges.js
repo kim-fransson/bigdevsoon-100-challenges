@@ -17,6 +17,7 @@ import {
   MobileNavigation,
   MovieTicket,
   MusicEvents,
+  NewsLetter,
   Notifications,
   PasswordGenerator,
   PlayList,
@@ -64,7 +65,7 @@ export const challenges = [
   { day: 29, title: "Video Player", solution: VideoPlayer },
   { day: 30, title: "Invoices", solution: Invoices },
   { day: 31, title: "undefined", solution: undefined },
-  { day: 32, title: "undefined", solution: undefined },
+  { day: 32, title: "NewsLetter", solution: NewsLetter },
   { day: 33, title: "undefined", solution: undefined },
   { day: 34, title: "User Profile", solution: UserProfile },
 ];
