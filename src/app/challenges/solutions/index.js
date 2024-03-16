@@ -3,6 +3,7 @@ export * from "./ArticleSlider";
 export * from "./CardWallet";
 export * from "./ContactUs";
 export * from "./CreateAccount";
+export * from "./Dashboard";
 export * from "./FurFriends";
 export * from "./HomePage";
 export * from "./HotelBooking";
