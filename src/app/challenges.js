@@ -25,6 +25,7 @@ import {
   PlayList,
   PricingPlans,
   ProfileCard,
+  RateUs,
   Recipe,
   RestaurantReservation,
   ShoppingList,
@@ -70,4 +71,5 @@ export const challenges = [
   { day: 32, title: "NewsLetter", solution: NewsLetter },
   { day: 33, title: "Brand Visualizer", solution: BrandVisualizer },
   { day: 34, title: "User Profile", solution: UserProfile },
+  { day: 35, title: "Rate Us", solution: RateUs },
 ];

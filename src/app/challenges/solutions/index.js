@@ -24,6 +24,7 @@ export * from "./PasswordGenerator";
 export * from "./PlayList";
 export * from "./PricingPlans";
 export * from "./ProfileCard";
+export * from "./RateUs";
 export * from "./Recipe";
 export * from "./RestaurantReservation";
 export * from "./ShoppingList";
