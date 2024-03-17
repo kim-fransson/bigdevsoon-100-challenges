@@ -1,6 +1,7 @@
 import {
   AddToBag,
   ArticleSlider,
+  BrandVisualizer,
   CardWallet,
   ContactUs,
   CreateAccount,
@@ -67,6 +68,6 @@ export const challenges = [
   { day: 30, title: "Invoices", solution: Invoices },
   { day: 31, title: "Dashboard", solution: Dashboard },
   { day: 32, title: "NewsLetter", solution: NewsLetter },
-  { day: 33, title: "undefined", solution: undefined },
+  { day: 33, title: "Brand Visualizer", solution: BrandVisualizer },
   { day: 34, title: "User Profile", solution: UserProfile },
 ];

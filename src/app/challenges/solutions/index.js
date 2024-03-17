@@ -1,5 +1,6 @@
 export * from "./AddToBag";
 export * from "./ArticleSlider";
+export * from "./BrandVisualizer";
 export * from "./CardWallet";
 export * from "./ContactUs";
 export * from "./CreateAccount";
