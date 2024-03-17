@@ -8,7 +8,7 @@ export const RateUs = () => {
     <main
       className={`flex items-center justify-center min-h-dvh bg-sky-100 p-4 ${fredoka}`}
     >
-      <div className="max-w-xl w-full rounded-2xl shadow-2xl bg-white p-8 grid gap-6 justify-items-center">
+      <div className="rounded-2xl shadow-2xl bg-white p-8 grid gap-6 justify-items-center">
         <h2 className="font-semibold text-3xl">Rate Us!</h2>
         <h3 className="font-medium text-black/60">
           Tell us about your experience
@@ -17,7 +17,7 @@ export const RateUs = () => {
         <RadioGroup
           defaultValue="Good"
           orientation="horizontal"
-          className="flex flex-wrap gap-4 justify-around w-full items-center"
+          className="flex flex-wrap gap-x-8 gap-y-4 justify-center w-full items-center"
         >
           <EmojiRadio value="Terrible">😵</EmojiRadio>
           <EmojiRadio value="Bad">😟</EmojiRadio>
