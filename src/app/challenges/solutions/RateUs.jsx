@@ -6,7 +6,7 @@ import { Button, Radio, RadioGroup } from "react-aria-components";
 export const RateUs = () => {
   return (
     <main
-      className={`flex items-center justify-center min-h-dvh bg-sky-100 p-4 ${fredoka}`}
+      className={`flex items-center justify-center min-h-dvh bg-sky-100 p-4 ${fredoka.className}`}
     >
       <div className="rounded-2xl shadow-2xl bg-white p-8 grid gap-6 justify-items-center">
         <h2 className="font-semibold text-3xl">Rate Us!</h2>
