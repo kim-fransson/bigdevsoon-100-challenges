@@ -22,7 +22,7 @@ export const RateUs = () => {
           <EmojiRadio value="Terrible">😵</EmojiRadio>
           <EmojiRadio value="Bad">😟</EmojiRadio>
           <EmojiRadio value="Okey">🙂</EmojiRadio>
-          <EmojiRadio value="Good">☺️</EmojiRadio>
+          <EmojiRadio value="Good">😊</EmojiRadio>
           <EmojiRadio value="Great">😄</EmojiRadio>
         </RadioGroup>
 
@@ -41,7 +41,7 @@ const EmojiRadio = (props) => {
       className="text-7xl outline-none opacity-50 hover:opacity-80 selected:opacity-100 transition-all cursor-pointer
     group"
     >
-      <div className="grid justify-items-center">
+      <div className="grid justify-items-center gap-1">
         <div className="group-focus-visible:ring-4 group-focus-visible:ring-yellow-400 rounded-full group-hover:animate-wiggle-more group-hover:animate-infinite group-hover:animate-duration-[1500ms]">
           {props.children}
         </div>
