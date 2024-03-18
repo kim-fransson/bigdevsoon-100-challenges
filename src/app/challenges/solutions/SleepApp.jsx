@@ -40,7 +40,7 @@ const button = tv({
 });
 
 export const SleepApp = () => {
-  const [isStart, setIsStart] = useState(false);
+  const [isStart, setIsStart] = useState(true);
 
   const getStarted = () => setIsStart(false);
   const returnToStart = () => setIsStart(true);
