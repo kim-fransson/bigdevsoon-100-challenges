@@ -29,6 +29,7 @@ export * from "./Recipe";
 export * from "./RestaurantReservation";
 export * from "./ShoppingList";
 export * from "./SignUp";
+export * from "./SleepApp";
 export * from "./TaskBoard";
 export * from "./UploadImage";
 export * from "./UserProfile";

@@ -30,6 +30,7 @@ import {
   RestaurantReservation,
   ShoppingList,
   SignUp,
+  SleepApp,
   TaskBoard,
   UploadImage,
   UserProfile,
@@ -72,4 +73,5 @@ export const challenges = [
   { day: 33, title: "Brand Visualizer", solution: BrandVisualizer },
   { day: 34, title: "User Profile", solution: UserProfile },
   { day: 35, title: "Rate Us", solution: RateUs },
+  { day: 36, title: "Sleep App", solution: SleepApp },
 ];
