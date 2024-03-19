@@ -32,7 +32,7 @@ export const ExploreFlights = () => {
   return (
     <main
       className={`min-h-dvh bg-sky-100
-    flex items-center justify-center ${fredoka.className}`}
+    flex items-center justify-center p-4 ${fredoka.className}`}
     >
       <Tabs
         className="max-w-screen-lg w-full"
@@ -68,7 +68,7 @@ export const ExploreFlights = () => {
             <Radio value="Multi-city" />
           </RadioGroup>
 
-          <Group className="bg-gray-300 rounded-md flex items-center gap-1 p-2">
+          <Group className="bg-gray-300 rounded-md flex flex-wrap items-center gap-1 p-2">
             <TextField
               aria-label="where from?"
               icon={<FlightTakeoffIcon />}
@@ -85,7 +85,7 @@ export const ExploreFlights = () => {
 
             <DateField
               defaultValue={today(getLocalTimeZone())}
-              className="flex w-full bg-white px-3 py-2 rounded-md font-medium items-center gap-2 shadow-md"
+              className="flex flex-1 bg-white px-3 py-2 rounded-md font-medium items-center gap-2 shadow-md"
             >
               <DateInput className="flex order-2 peer">
                 {(segment) => (
@@ -100,7 +100,7 @@ export const ExploreFlights = () => {
               </Label>
             </DateField>
 
-            <Button className="bg-white rounded-md self-stretch aspect-square shrink-0 shadow-md">
+            <Button className="bg-white rounded-md self-stretch min-w-10 shadow-md">
               <CloseIcon fontSize="small" />
             </Button>
           </Group>
@@ -137,7 +137,7 @@ const Button = (props) => {
 
 const TextField = (props) => {
   return (
-    <AriaTextField className="flex items-center gap-2 bg-white px-3 py-2 rounded-md placeholder:text-gray-500 font-medium shadow-md">
+    <AriaTextField className="flex flex-1 items-center gap-2 bg-white px-3 py-2 rounded-md placeholder:text-gray-500 font-medium shadow-md">
       <Input
         placeholder={props.placeholder}
         className="bg-transparent outline-none peer order-2 selection:bg-sky-200"
@@ -151,7 +151,7 @@ const Tab = (props) => {
   return (
     <AriaTab
       {...props}
-      className="flex gap-2 items-center bg-white px-8 py-3
+      className="flex gap-2 items-center bg-white md:px-8 md:py-3 p-3
     outline-none selected:bg-sky-500 selected:text-gray-50 first:rounded-tl-2xl cursor-pointer transition-all 
     focus-visible:outline-2 focus-visible:outline-yellow-400 focus-visible:-outline-offset-2
     font-semibold disabled:cursor-not-allowed"
@@ -165,7 +165,7 @@ const TabPanel = (props) => {
   return (
     <AriaTabPanel
       {...props}
-      className="bg-white rounded-b-2xl rounded-tr-2xl shadow-xl p-8 grid gap-6"
+      className="bg-white rounded-b-2xl rounded-tr-2xl shadow-xl md:p-8 p-4 grid md:gap-6 gap-4"
     >
       {props.children}
     </AriaTabPanel>
