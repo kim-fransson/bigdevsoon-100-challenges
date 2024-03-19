@@ -6,6 +6,7 @@ import {
   ContactUs,
   CreateAccount,
   Dashboard,
+  ExploreFlights,
   FurFriends,
   HomePage,
   HotelBooking,
@@ -74,4 +75,5 @@ export const challenges = [
   { day: 34, title: "User Profile", solution: UserProfile },
   { day: 35, title: "Rate Us", solution: RateUs },
   { day: 36, title: "Sleep App", solution: SleepApp },
+  { day: 37, title: "Explore Flights", solution: ExploreFlights },
 ];

@@ -5,6 +5,7 @@ export * from "./CardWallet";
 export * from "./ContactUs";
 export * from "./CreateAccount";
 export * from "./Dashboard";
+export * from "./ExploreFlights";
 export * from "./FurFriends";
 export * from "./HomePage";
 export * from "./HotelBooking";
