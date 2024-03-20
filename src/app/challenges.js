@@ -20,6 +20,7 @@ import {
   MobileNavigation,
   MovieTicket,
   MusicEvents,
+  MusicFestival,
   NewsLetter,
   Notifications,
   PasswordGenerator,
@@ -76,4 +77,5 @@ export const challenges = [
   { day: 35, title: "Rate Us", solution: RateUs },
   { day: 36, title: "Sleep App", solution: SleepApp },
   { day: 37, title: "Explore Flights", solution: ExploreFlights },
+  { day: 38, title: "Music Festival", solution: MusicFestival },
 ];
