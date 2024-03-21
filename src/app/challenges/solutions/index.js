@@ -36,3 +36,4 @@ export * from "./TaskBoard";
 export * from "./UploadImage";
 export * from "./UserProfile";
 export * from "./VideoPlayer";
+export * from "./QRCodeScanner";

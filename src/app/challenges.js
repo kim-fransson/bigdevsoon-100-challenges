@@ -27,6 +27,7 @@ import {
   PlayList,
   PricingPlans,
   ProfileCard,
+  QRCodeScanner,
   RateUs,
   Recipe,
   RestaurantReservation,
@@ -78,4 +79,5 @@ export const challenges = [
   { day: 36, title: "Sleep App", solution: SleepApp },
   { day: 37, title: "Explore Flights", solution: ExploreFlights },
   { day: 38, title: "Music Festival", solution: MusicFestival },
+  { day: 39, title: "QRCodeScanner", solution: QRCodeScanner },
 ];
