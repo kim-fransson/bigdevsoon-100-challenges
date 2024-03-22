@@ -33,12 +33,14 @@ export const FAQ = () => {
                   <div className="flex items-center gap-4 justify-between">
                     <h2 className="text-lg font-medium">{item.question}</h2>
 
-                    <AddCircleOutlineRoundedIcon
+                    <span
                       className={twMerge(
-                        "transition-transform duration-300",
+                        "transition-transform duration-500",
                         isSelected ? "rotate-45" : "rotate-0",
                       )}
-                    />
+                    >
+                      <AddCircleOutlineRoundedIcon />
+                    </span>
                   </div>
                   <div
                     className={twMerge(
