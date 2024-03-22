@@ -4,7 +4,6 @@ import { fredoka } from "@/app/fonts";
 import { ListBox, ListBoxItem } from "react-aria-components";
 import { twMerge } from "tailwind-merge";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
-import RemoveCircleOutlineRoundedIcon from "@mui/icons-material/RemoveCircleOutlineRounded";
 
 export const FAQ = () => {
   return (
@@ -21,7 +20,7 @@ export const FAQ = () => {
           aria-label="faqs"
           items={faqs}
           selectionMode="single"
-          defaultSelectedKeys={[1]}
+          defaultSelectedKeys={[2]}
         >
           {(item) => (
             <ListBoxItem
