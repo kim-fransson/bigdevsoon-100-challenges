@@ -67,7 +67,7 @@ export const CreateWorkspace = () => {
       className={`flex p-4 justify-center items-center min-h-dvh bg-lime-50 ${fredoka.className}`}
     >
       <div
-        className="bg-white rounded-xl shadow-xl p-6 grid auto-rows-min gap-6
+        className="bg-white rounded-xl shadow-xl p-6 grid auto-rows-min gap-5
       max-w-xl w-full"
       >
         <h2 className="text-2xl font-semibold">Setup workspace</h2>
@@ -149,7 +149,10 @@ export const CreateWorkspace = () => {
             >
               <MoreHorizRoundedIcon />
             </Button>
-            <Popover className="entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out">
+            <Popover
+              crossOffset={-120}
+              className="entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out"
+            >
               <Menu className="shadow-lg rounded-lg bg-white outline-none">
                 <MenuItem id="resend">Resend invitation</MenuItem>
                 <MenuItem id="remove">Remove</MenuItem>
@@ -170,7 +173,7 @@ const TagGroup = (props) => {
   return (
     <AriaTagGroup className="grid gap-2" {...props}>
       <Label className={label()}>{props.label}</Label>
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-4 flex-wrap">
         <div
           className={base({
             class: "min-h-[46px] flex items-center gap-2 flex-wrap flex-1",
