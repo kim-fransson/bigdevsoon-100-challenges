@@ -33,6 +33,7 @@ import {
   RateUs,
   Recipe,
   RestaurantReservation,
+  SettingsAppearance,
   ShoppingList,
   SignUp,
   SleepApp,
@@ -84,4 +85,5 @@ export const challenges = [
   { day: 39, title: "QRCodeScanner", solution: QRCodeScanner },
   { day: 40, title: "FAQ", solution: FAQ },
   { day: 41, title: "Create Workspace", solution: CreateWorkspace },
+  { day: 42, title: "Settings Appearance", solution: SettingsAppearance },
 ];

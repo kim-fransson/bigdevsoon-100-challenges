@@ -8,7 +8,6 @@ import {
   Select as AriaSelect,
   Button,
   SelectValue,
-  Text,
   Popover,
   ListBox,
   ListBoxItem,
