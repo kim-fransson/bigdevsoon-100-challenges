@@ -4,6 +4,7 @@ export * from "./BrandVisualizer";
 export * from "./CardWallet";
 export * from "./ContactUs";
 export * from "./CreateAccount";
+export * from "./CreateWorkspace";
 export * from "./Dashboard";
 export * from "./ExploreFlights";
 export * from "./FAQ";

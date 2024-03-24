@@ -5,6 +5,7 @@ import {
   CardWallet,
   ContactUs,
   CreateAccount,
+  CreateWorkspace,
   Dashboard,
   ExploreFlights,
   FAQ,
@@ -82,4 +83,5 @@ export const challenges = [
   { day: 38, title: "Music Festival", solution: MusicFestival },
   { day: 39, title: "QRCodeScanner", solution: QRCodeScanner },
   { day: 40, title: "FAQ", solution: FAQ },
+  { day: 41, title: "Create Workspace", solution: CreateWorkspace },
 ];
