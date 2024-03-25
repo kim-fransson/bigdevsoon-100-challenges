@@ -174,6 +174,7 @@ export const PlayerProfile = () => {
           <Article
             headline="Kansas City Chiefs Unveil New Strategy: Patrick Mahomes to Throw Footballs From a Helicopter for More 'Airtime'"
             published="April 16, 2024"
+            image="/challenges/43/article-1.png"
           />
 
           <Separator className="border-gray-400" />
@@ -181,6 +182,7 @@ export const PlayerProfile = () => {
           <Article
             headline="Patrick Mahomes Breaks Record for Longest Hail Mary by Throwing a Football Across Three States, Claims 'I Was Just Looking for the Restroom'"
             published="May 29, 2024"
+            image="/challenges/43/article-2.png"
           />
         </div>
       </div>
@@ -190,9 +192,20 @@ export const PlayerProfile = () => {
 
 const Article = (props) => {
   return (
-    <div>
-      <span className="opacity-50 text-sm font-medium">{props.published}</span>
-      <h3 className="font-medium">{props.headline}</h3>
+    <div className="flex items-center gap-4">
+      <div>
+        <span className="opacity-50 text-sm font-medium">
+          {props.published}
+        </span>
+        <h3 className="font-medium">{props.headline}</h3>
+      </div>
+      <Image
+        width={80}
+        height={80}
+        alt=""
+        src={props.image}
+        className="ml-auto rounded-lg size"
+      />
     </div>
   );
 };
