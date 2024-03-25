@@ -27,6 +27,7 @@ import {
   Notifications,
   PasswordGenerator,
   PlayList,
+  PlayerProfile,
   PricingPlans,
   ProfileCard,
   QRCodeScanner,
@@ -86,4 +87,5 @@ export const challenges = [
   { day: 40, title: "FAQ", solution: FAQ },
   { day: 41, title: "Create Workspace", solution: CreateWorkspace },
   { day: 42, title: "Settings Appearance", solution: SettingsAppearance },
+  { day: 43, title: "Player Profile", solution: PlayerProfile },
 ];
