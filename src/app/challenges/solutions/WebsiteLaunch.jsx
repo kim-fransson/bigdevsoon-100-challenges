@@ -1,13 +1,12 @@
-import { josefinSans } from "@/app/fonts";
+"use client";
 
-import bg from "../../assets/background.png";
+import { josefinSans } from "@/app/fonts";
 
 export const WebsiteLaunch = () => {
   return (
     <main
-      style={{ backgroundImage: `url(${bg.src})` }}
       className={`min-h-dvh flex items-center justify-center bg-white p-4 
-      bg-cover bg-no-repeat ${josefinSans.className}`}
+      bg-[url('/challenges/44/background.png')] bg-cover bg-no-repeat ${josefinSans.className}`}
     >
       <div className="grid max-w-screen-lg w-full gap-8 mb-48">
         <h1 className="text-4xl font-bold uppercase text-center tracking-widest">
