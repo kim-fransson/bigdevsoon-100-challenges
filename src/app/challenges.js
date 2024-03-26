@@ -42,6 +42,7 @@ import {
   UploadImage,
   UserProfile,
   VideoPlayer,
+  WebsiteLaunch,
 } from "./challenges/solutions";
 
 export const challenges = [
@@ -88,4 +89,5 @@ export const challenges = [
   { day: 41, title: "Create Workspace", solution: CreateWorkspace },
   { day: 42, title: "Settings Appearance", solution: SettingsAppearance },
   { day: 43, title: "Player Profile", solution: PlayerProfile },
+  { day: 44, title: "Website Launch", solution: WebsiteLaunch },
 ];
