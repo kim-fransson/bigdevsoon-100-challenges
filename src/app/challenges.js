@@ -1,5 +1,6 @@
 import {
   AddToBag,
+  AppNavigation,
   ArticleSlider,
   BrandVisualizer,
   CardWallet,
@@ -96,4 +97,6 @@ export const challenges = [
   { day: 45, title: "Hosting Features", solution: HostingFeatures },
   { day: 46, title: "Customer List", solution: CustomerList },
   { day: 47, title: "Export File", solution: ExportFile },
+  { day: 48, title: "TBD", solution: undefined },
+  { day: 49, title: "App Navigation", solution: AppNavigation },
 ];
