@@ -8,6 +8,7 @@ export * from "./CreateWorkspace";
 export * from "./CustomerList";
 export * from "./Dashboard";
 export * from "./ExploreFlights";
+export * from "./ExportFile";
 export * from "./FAQ";
 export * from "./FurFriends";
 export * from "./HomePage";

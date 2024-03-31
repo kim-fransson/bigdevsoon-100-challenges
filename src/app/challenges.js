@@ -9,6 +9,7 @@ import {
   CustomerList,
   Dashboard,
   ExploreFlights,
+  ExportFile,
   FAQ,
   FurFriends,
   HomePage,
@@ -94,4 +95,5 @@ export const challenges = [
   { day: 44, title: "Website Launch", solution: WebsiteLaunch },
   { day: 45, title: "Hosting Features", solution: HostingFeatures },
   { day: 46, title: "Customer List", solution: CustomerList },
+  { day: 47, title: "Export File", solution: ExportFile },
 ];
