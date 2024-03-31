@@ -64,7 +64,7 @@ export const AppNavigation = () => {
           duration: 0.3,
           type: "easeInOut",
         }}
-        className="lg:h-[700px] h-screen bg-gray-950 text-gray-50 p-4 flex flex-col gap-4 lg:rounded-md
+        className="lg:h-[700px] h-dvh bg-gray-950 text-gray-50 p-4 flex flex-col gap-4 lg:rounded-md
         @container"
       >
         <header className="flex items-center @[150px]:justify-start justify-center gap-2.5 text-lg font-medium relative">
