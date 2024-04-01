@@ -103,7 +103,6 @@ const Footer = ({ editor }) => {
         className="transition-all pressed:scale-95 focus-visible:outline-2 focus-visible:outline-blue-600
           focus-visible:outline-offset-2 outline-none flex items-center justify-center p-1 rounded-md bg-gray-950 text-gray-50 ml-auto
           px-3 py-1"
-        onPress={() => editor.chain().focus().toggleBold().run()}
       >
         Post a message
       </Button>
@@ -170,8 +169,6 @@ const suggestion = {
           return;
         }
 
-        console.log({ props });
-
         popup = tippy("body", {
           getReferenceClientRect: props.clientRect,
           appendTo: () => document.body,
@@ -181,6 +178,8 @@ const suggestion = {
           trigger: "manual",
           placement: "bottom-start",
         });
+
+        component.ref?.focus();
       },
 
       onUpdate(props) {
@@ -221,7 +220,6 @@ const MentionList = (props) => {
       items={props.items}
       selectionMode="single"
       className="p-2 bg-white rounded-2xl shadow-xl"
-      autoFocus={true}
       onSelectionChange={(items) => {
         props.command({ id: Array.from(items)[0] });
       }}
