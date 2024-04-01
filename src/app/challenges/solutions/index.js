@@ -1,3 +1,4 @@
+export * from "./FriendRequest";
 export * from "./AddToBag";
 export * from "./AppNavigation";
 export * from "./ArticleSlider";

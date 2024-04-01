@@ -12,6 +12,7 @@ import {
   ExploreFlights,
   ExportFile,
   FAQ,
+  FriendRequest,
   FurFriends,
   HomePage,
   HostingFeatures,
@@ -100,4 +101,5 @@ export const challenges = [
   { day: 47, title: "Export File", solution: ExportFile },
   { day: 48, title: "Markdown Post", solution: MarkdownPost },
   { day: 49, title: "App Navigation", solution: AppNavigation },
+  { day: 50, title: "Friend Request", solution: FriendRequest },
 ];
