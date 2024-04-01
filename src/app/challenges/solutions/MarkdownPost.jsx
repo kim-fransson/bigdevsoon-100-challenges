@@ -179,7 +179,10 @@ const suggestion = {
           placement: "bottom-start",
         });
 
-        component.ref?.focus();
+        var mentionList = document.getElementById("mentionList");
+        if (mentionList) {
+          mentionList.focus();
+        }
       },
 
       onUpdate(props) {
@@ -215,6 +218,7 @@ const suggestion = {
 const MentionList = (props) => {
   return (
     <ListBox
+      id="mentionList"
       aria-label="suggestions"
       orientation="vertical"
       items={props.items}
