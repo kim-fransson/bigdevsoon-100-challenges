@@ -1,4 +1,3 @@
-export * from "./FriendRequest";
 export * from "./AddToBag";
 export * from "./AppNavigation";
 export * from "./ArticleSlider";
@@ -9,9 +8,11 @@ export * from "./CreateAccount";
 export * from "./CreateWorkspace";
 export * from "./CustomerList";
 export * from "./Dashboard";
+export * from "./DownloadApp";
 export * from "./ExploreFlights";
 export * from "./ExportFile";
 export * from "./FAQ";
+export * from "./FriendRequest";
 export * from "./FurFriends";
 export * from "./HomePage";
 export * from "./HostingFeatures";

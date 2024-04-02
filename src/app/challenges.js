@@ -9,6 +9,7 @@ import {
   CreateWorkspace,
   CustomerList,
   Dashboard,
+  DownloadApp,
   ExploreFlights,
   ExportFile,
   FAQ,
@@ -102,4 +103,5 @@ export const challenges = [
   { day: 48, title: "Markdown Post", solution: MarkdownPost },
   { day: 49, title: "App Navigation", solution: AppNavigation },
   { day: 50, title: "Friend Request", solution: FriendRequest },
+  { day: 51, title: "Download App", solution: DownloadApp },
 ];
