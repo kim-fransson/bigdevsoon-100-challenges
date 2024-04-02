@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import phone from "../../assets/phone.svg";
-import womanRunning from "../../assets/woman-running.svg";
+import womanRunning from "../../assets/woman-running.png";
 import { fredoka } from "@/app/fonts";
 import { Button } from "react-aria-components";
 
