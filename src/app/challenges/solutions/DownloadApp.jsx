@@ -35,12 +35,13 @@ export const DownloadApp = () => {
               </div>
             </div>
           </div>
-          <Image width={700} alt="" src={phone} className="relative" />
+          <Image width={700} alt="" src={phone} className="relative" priority />
           <Image
             width={500}
             alt=""
             src={womanRunning}
             className="absolute-center"
+            priority
           />
         </div>
 
