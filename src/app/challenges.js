@@ -22,6 +22,7 @@ import {
   ImagePreview,
   Invoices,
   JobBoard,
+  LanguageApp,
   LeaderBoards,
   MarkdownPost,
   MeetingSchedule,
@@ -104,4 +105,5 @@ export const challenges = [
   { day: 49, title: "App Navigation", solution: AppNavigation },
   { day: 50, title: "Friend Request", solution: FriendRequest },
   { day: 51, title: "Download App", solution: DownloadApp },
+  { day: 52, title: "Language App", solution: LanguageApp },
 ];

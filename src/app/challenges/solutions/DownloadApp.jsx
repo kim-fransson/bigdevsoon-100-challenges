@@ -13,7 +13,7 @@ export const DownloadApp = () => {
       className={`min-h-dvh bg-gray-50 flex items-center justify-center p-4 ${fredoka.className}`}
     >
       <div className="max-w-screen-xl w-full gap-8 flex flex-col md:flex-row justify-between">
-        <div className="relative">
+        <div className="relative min-w-[300px]">
           <div className="max-w-xl w-full aspect-[3/2] absolute-center flex">
             <div className="bg-gradient-to-b from-[#f9aa22] via-[#d57543] to-[#ac396a] flex-1 flex rounded-[3rem]">
               <div className="bg-white flex-1 m-1 rounded-[2.75rem] flex">

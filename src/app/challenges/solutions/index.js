@@ -21,6 +21,7 @@ export * from "./ImageCarousel";
 export * from "./ImagePreview";
 export * from "./Invoices";
 export * from "./JobBoard";
+export * from "./LanguageApp";
 export * from "./Leaderboards";
 export * from "./MarkdownPost";
 export * from "./MeetingSchedule";
