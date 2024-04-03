@@ -25,7 +25,7 @@ export const LanguageApp = () => {
       className={`min-h-dvh lg:flex lg:items-center lg:justify-center ${fredoka.className} bg-purple-500`}
     >
       <div
-        className="lg:h-auto h-dvh lg:rounded-xl lg:shadow-xl p-4 bg-[#f9f9f9]
+        className="lg:min-h-0 min-h-dvh lg:rounded-xl lg:shadow-xl p-4 bg-[#f9f9f9]
       lg:max-w-sm w-full flex flex-col gap-4 relative overflow-hidden"
       >
         <header className="flex items-center gap-2 text-gray-950/80">
@@ -118,7 +118,7 @@ export const LanguageApp = () => {
           <ListBox
             aria-label="leaderboard"
             items={leaderboard}
-            className="grid gap-2 max-h-[180px] overflow-auto lg:pb-14 pb-24"
+            className="grid gap-2 lg:max-h-[180px] overflow-auto pb-14"
             orientation="vertical"
           >
             {(item) => (
@@ -144,7 +144,7 @@ export const LanguageApp = () => {
           </ListBox>
         </div>
 
-        <nav className="grid grid-cols-3 absolute bg-white bottom-0 left-0 right-0 border-t border-purple-200">
+        <nav className="grid grid-cols-3 fixed lg:absolute bg-white bottom-0 left-0 right-0 border-t border-purple-200">
           <div className="text-purple-300 flex items-center justify-center p-2">
             <AccountCircleRoundedIcon fontSize="large" />
           </div>
