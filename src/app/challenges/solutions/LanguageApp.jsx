@@ -14,6 +14,7 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import TextSnippetRoundedIcon from "@mui/icons-material/TextSnippetRounded";
 import PlayCircleFilledWhiteRoundedIcon from "@mui/icons-material/PlayCircleFilledWhiteRounded";
 import { useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export const LanguageApp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +45,14 @@ export const LanguageApp = () => {
         </header>
 
         <div
+          onMouseEnter={() => {
+            setIsOpen(true);
+          }}
+          onMouseLeave={() => {
+            setIsOpen(false);
+          }}
           ref={triggerRef}
-          className="rounded-lg p-2 bg-purple-600 text-gray-50 grid grid-cols-[auto_1fr] items-center gap-2 shadow-md"
+          className="rounded-lg relative p-2 bg-purple-600 text-gray-50 grid grid-cols-[auto_1fr] items-center gap-2 shadow-md"
         >
           <span className="text-6xl">🇫🇷</span>
           <div className="grid gap-1">
@@ -64,18 +71,18 @@ export const LanguageApp = () => {
               )}
             </ProgressBar>
           </div>
-        </div>
-        {/* <Popover
-          triggerRef={triggerRef}
-          isOpen={isOpen}
-          offset={-16}
-          className={`bg-white rounded-full py-1 px-2 text-purple-500 text-sm font-medium 
+          <div
+            className={twMerge(
+              `bg-white rounded-full py-1 px-2 text-purple-500 text-sm font-medium 
             entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out 
-            flex items-center gap-1 shadow-md cursor-pointer ${fredoka.className}`}
-        >
-          <PlayCircleFilledWhiteRoundedIcon />
-          Continue
-        </Popover> */}
+            flex items-center gap-1 shadow-md cursor-pointer transition-all absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2`,
+              isOpen ? "opacity-100" : "opacity-0",
+            )}
+          >
+            <PlayCircleFilledWhiteRoundedIcon />
+            Continue
+          </div>
+        </div>
 
         <div className="space-y-2">
           <h2 className="text-lg font-medium">My lessons</h2>
