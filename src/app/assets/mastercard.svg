@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M48 0L48 0L48 48L0 48L0 0L48 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Mastercard">
+    <path d="M48 0L48 0L48 48L0 48L0 0L48 0Z" id="Mastercard" fill="none" stroke="none" />
+    <path d="M45 35C45 37.209 43.209 39 41 39L7 39C4.791 39 3 37.209 3 35L3 13C3 10.791 4.791 9 7 9L41 9C43.209 9 45 10.791 45 13L45 35L45 35Z" id="Shape" fill="#3F51B5" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M30 14C26.4273 14 23.1261 15.906 21.3397 19C19.5534 22.094 19.5534 25.906 21.3397 29C23.1261 32.094 26.4273 34 30 34C33.5727 34 36.8739 32.094 38.6603 29C40.4466 25.906 40.4466 22.094 38.6603 19C36.8739 15.906 33.5727 14 30 14L30 14Z" id="Shape" fill="#FFC107" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M22.014 30C21.55 29.383 21.151 28.716 20.838 28L26.163 28C26.441 27.364 26.659 26.696 26.8 26L20.202 26C20.07 25.354 20 24.686 20 24L27 24C27 23.314 26.93 22.646 26.799 22L20.201 22C20.343 21.304 20.56 20.636 20.838 20L26.163 20C25.85 19.284 25.452 18.617 24.987 18L22.014 18C22.451 17.42 22.944 16.878 23.495 16.405C21.747 14.909 19.481 14 17 14C11.477 14 7 18.477 7 24C7 29.523 11.477 34 17 34C20.269 34 23.162 32.425 24.986 30L22.014 30L22.014 30Z" id="Shape" fill="#FF3D00" stroke="none" clip-path="url(#clip_1)" />
+  </g>
+</svg>

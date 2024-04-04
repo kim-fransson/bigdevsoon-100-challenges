@@ -2,6 +2,7 @@ import {
   AddToBag,
   AppNavigation,
   ArticleSlider,
+  BillingPage,
   BrandVisualizer,
   CardWallet,
   ContactUs,
@@ -106,4 +107,5 @@ export const challenges = [
   { day: 50, title: "Friend Request", solution: FriendRequest },
   { day: 51, title: "Download App", solution: DownloadApp },
   { day: 52, title: "Language App", solution: LanguageApp },
+  { day: 53, title: "Billing Page", solution: BillingPage },
 ];
