@@ -40,6 +40,7 @@ import {
   PlayerProfile,
   PricingPlans,
   ProfileCard,
+  ProgressBars,
   QRCodeScanner,
   RateUs,
   Recipe,
@@ -110,4 +111,5 @@ export const challenges = [
   { day: 52, title: "Language App", solution: LanguageApp },
   { day: 53, title: "Billing Page", solution: BillingPage },
   { day: 54, title: "Article Summary", solution: ArticleSummary },
+  { day: 55, title: "Progress Bars", solution: ProgressBars },
 ];
