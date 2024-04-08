@@ -41,6 +41,7 @@ import {
   PricingPlans,
   ProfileCard,
   ProgressBars,
+  ProjectRoadmap,
   QRCodeScanner,
   RateUs,
   Recipe,
@@ -112,4 +113,5 @@ export const challenges = [
   { day: 53, title: "Billing Page", solution: BillingPage },
   { day: 54, title: "Article Summary", solution: ArticleSummary },
   { day: 55, title: "Progress Bars", solution: ProgressBars },
+  { day: 56, title: "Project Roadmap", solution: ProjectRoadmap },
 ];

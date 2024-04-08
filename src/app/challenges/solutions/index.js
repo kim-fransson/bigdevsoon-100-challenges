@@ -40,6 +40,7 @@ export * from "./PlayList";
 export * from "./PricingPlans";
 export * from "./ProfileCard";
 export * from "./ProgressBars";
+export * from "./ProjectRoadmap";
 export * from "./QRCodeScanner";
 export * from "./RateUs";
 export * from "./Recipe";
