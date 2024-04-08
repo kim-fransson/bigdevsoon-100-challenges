@@ -17,6 +17,7 @@ import {
   FAQ,
   FriendRequest,
   FurFriends,
+  GameProfile,
   HomePage,
   HostingFeatures,
   HotelBooking,
@@ -114,4 +115,5 @@ export const challenges = [
   { day: 54, title: "Article Summary", solution: ArticleSummary },
   { day: 55, title: "Progress Bars", solution: ProgressBars },
   { day: 56, title: "Project Roadmap", solution: ProjectRoadmap },
+  { day: 57, title: "Game Profile", solution: GameProfile },
 ];
