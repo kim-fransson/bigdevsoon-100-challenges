@@ -8,6 +8,7 @@ import {
   CardWallet,
   ContactUs,
   CreateAccount,
+  CreateTask,
   CreateWorkspace,
   CustomerList,
   Dashboard,
@@ -116,4 +117,5 @@ export const challenges = [
   { day: 55, title: "Progress Bars", solution: ProgressBars },
   { day: 56, title: "Project Roadmap", solution: ProjectRoadmap },
   { day: 57, title: "Game Profile", solution: GameProfile },
+  { day: 58, title: "Create Task", solution: CreateTask },
 ];
