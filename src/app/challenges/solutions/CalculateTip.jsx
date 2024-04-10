@@ -23,7 +23,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const initialState = {
   billTotal: 0,
-  tip: 15,
+  tip: "15",
   splitBy: 4,
 };
 
@@ -68,10 +68,10 @@ export const CalculateTip = () => {
           >
             <Label className="font-semibold text-lg">Choose a tip</Label>
             <Group className="flex gap-3">
-              <Radio value={10}>10%</Radio>
-              <Radio value={15}>15%</Radio>
-              <Radio value={20}>20%</Radio>
-              <Radio value={25}>25%</Radio>
+              <Radio value={"10"}>10%</Radio>
+              <Radio value={"15"}>15%</Radio>
+              <Radio value={"20"}>20%</Radio>
+              <Radio value={"25"}>25%</Radio>
             </Group>
           </RadioGroup>
 
