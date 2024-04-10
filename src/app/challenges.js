@@ -5,6 +5,7 @@ import {
   ArticleSummary,
   BillingPage,
   BrandVisualizer,
+  CalculateTip,
   CardWallet,
   ContactUs,
   CreateAccount,
@@ -118,4 +119,5 @@ export const challenges = [
   { day: 56, title: "Project Roadmap", solution: ProjectRoadmap },
   { day: 57, title: "Game Profile", solution: GameProfile },
   { day: 58, title: "Create Task", solution: CreateTask },
+  { day: 59, title: "Calculate Tip", solution: CalculateTip },
 ];

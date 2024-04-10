@@ -4,6 +4,7 @@ export * from "./ArticleSlider";
 export * from "./ArticleSummary";
 export * from "./BillingPage";
 export * from "./BrandVisualizer";
+export * from "./CalculateTip";
 export * from "./CardWallet";
 export * from "./ContactUs";
 export * from "./CreateAccount";
