@@ -7,6 +7,7 @@ import {
   BrandVisualizer,
   CalculateTip,
   CardWallet,
+  CodeVerification,
   ContactUs,
   CreateAccount,
   CreateTask,
@@ -120,4 +121,5 @@ export const challenges = [
   { day: 57, title: "Game Profile", solution: GameProfile },
   { day: 58, title: "Create Task", solution: CreateTask },
   { day: 59, title: "Calculate Tip", solution: CalculateTip },
+  { day: 60, title: "Code Verification", solution: CodeVerification },
 ];

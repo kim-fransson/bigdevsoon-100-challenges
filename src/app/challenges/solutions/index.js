@@ -6,6 +6,7 @@ export * from "./BillingPage";
 export * from "./BrandVisualizer";
 export * from "./CalculateTip";
 export * from "./CardWallet";
+export * from "./CodeVerification";
 export * from "./ContactUs";
 export * from "./CreateAccount";
 export * from "./CreateTask";
