@@ -8,7 +8,7 @@ export const Testimonials = () => {
     <main
       className={`min-h-dvh flex justify-center items-center bg-slate-600 p-4 ${fredoka.className}`}
     >
-      <div className="text-center">
+      <div className="flex flex-col items-center">
         <h2 className="text-4xl text-slate-50 font-semibold">
           Don&apos;t take our word for it.
         </h2>
