@@ -40,7 +40,7 @@ export const FlightTicket = () => {
               <span className="uppercase text-xs opacity-60 font-medium">
                 class
               </span>
-              <span className="text-lg font-medium">Busniness</span>
+              <span className="text-lg font-medium">Business</span>
             </div>
           </div>
         </div>
