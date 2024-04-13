@@ -18,6 +18,7 @@ import {
   ExploreFlights,
   ExportFile,
   FAQ,
+  FlightTicket,
   FriendRequest,
   FurFriends,
   GameProfile,
@@ -122,4 +123,5 @@ export const challenges = [
   { day: 58, title: "Create Task", solution: CreateTask },
   { day: 59, title: "Calculate Tip", solution: CalculateTip },
   { day: 60, title: "Code Verification", solution: CodeVerification },
+  { day: 61, title: "Flight Ticket", solution: FlightTicket },
 ];

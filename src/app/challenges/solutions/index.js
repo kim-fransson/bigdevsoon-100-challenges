@@ -59,3 +59,4 @@ export * from "./UserProfile";
 export * from "./VideoPlayer";
 export * from "./VideoPlayer";
 export * from "./WebsiteLaunch";
+export * from "./FlightTicket";
