@@ -48,6 +48,11 @@ body {
     border-bottom-right-radius: 100% 20%;
   }
 
+  .curved-2 {
+    border-bottom-left-radius: 100% 120%;
+    border-bottom-right-radius: 100% 120%;
+  }
+
   .flight-path {
     border-top-left-radius: 100% 80%;
     border-top-right-radius: 100% 80%;

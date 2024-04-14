@@ -60,6 +60,7 @@ import {
   UploadImage,
   UserProfile,
   VideoPlayer,
+  WeatherApp,
   WebsiteLaunch,
 } from "./challenges/solutions";
 
@@ -126,4 +127,5 @@ export const challenges = [
   { day: 60, title: "Code Verification", solution: CodeVerification },
   { day: 61, title: "Flight Ticket", solution: FlightTicket },
   { day: 62, title: "Testimonials", solution: Testimonials },
+  { day: 63, title: "Weather App", solution: WeatherApp },
 ];
