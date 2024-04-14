@@ -5,7 +5,10 @@ export const WeatherApp = () => {
     <main
       className={`${fredoka.className} min-h-dvh md:flex md:items-center md:justify-center bg-gray-100 text-[#202020]`}
     >
-      <div className="w-full bg-gradient-to-b from-sky-100 to-white overflow-hidden md:max-w-sm md:h-[650px] md:min-h-0 min-h-dvh rounded-3xl shadow-2xl bg-white flex flex-col">
+      <div
+        className="w-full bg-gradient-to-b from-sky-100 to-white overflow-hidden md:max-w-sm md:h-[650px] 
+        md:min-h-0 min-h-dvh md:rounded-3xl md:shadow-2xl bg-white flex flex-col pb-4"
+      >
         <div className="bg-white pt-8 text-center pb-28 curved-2 relative">
           <h2 className="font-semibold text-3xl">Malmö</h2>
           <p>Sun with occasional clouds</p>
