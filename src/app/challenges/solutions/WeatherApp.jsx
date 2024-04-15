@@ -35,7 +35,7 @@ export const WeatherApp = () => {
             </div>
           </div>
 
-          <div className="overflow-auto p-4">
+          <div className="overflow-x-auto p-4">
             <div className="flex gap-4">
               {forecast.map((data) => (
                 <div
