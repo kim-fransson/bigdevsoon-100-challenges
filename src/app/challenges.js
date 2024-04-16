@@ -28,6 +28,7 @@ import {
   HotelBooking,
   ImageCarousel,
   ImagePreview,
+  Interests,
   Invoices,
   JobBoard,
   LanguageApp,
@@ -130,4 +131,5 @@ export const challenges = [
   { day: 62, title: "Testimonials", solution: Testimonials },
   { day: 63, title: "Weather App", solution: WeatherApp },
   { day: 64, title: "Document Manager", solution: DocumentManager },
+  { day: 65, title: "Interests", solution: Interests },
 ];
