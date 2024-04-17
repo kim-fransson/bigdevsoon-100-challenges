@@ -83,7 +83,7 @@ export const NavigationUI = () => {
           <Link className="outline-none focus-visible:outline-2 focus-visible:outline-pink-600 focus-visible:outline-offset-1">
             Product
           </Link>
-          <MenuTrigger defaultOpen>
+          <MenuTrigger>
             <Button
               aria-label="Menu"
               className="outline-none flex items-center gap-0.5 focus-visible:outline-2 focus-visible:outline-pink-600 focus-visible:outline-offset-1"
