@@ -22,7 +22,6 @@ import SecurityIcon from "@mui/icons-material/Security";
 import ApiIcon from "@mui/icons-material/Api";
 import PieChartIcon from "@mui/icons-material/PieChart";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { color } from "framer-motion";
 
 export const NavigationUI = () => {
   const items = [
@@ -31,14 +30,14 @@ export const NavigationUI = () => {
       name: "Web Development",
       description: "Building dynamic webistes for your success",
       icon: <WebIcon className="text-green-600" />,
-      color: "#bbf7d0",
+      color: "#dcfce7",
     },
     {
       id: 2,
       name: "Cloud Solutions",
       description: "Unlocking cloud potential for business",
       icon: <CloudDoneIcon className="text-blue-600" />,
-      color: "#bfdbfe",
+      color: "#dbeafe",
     },
 
     {
@@ -46,28 +45,28 @@ export const NavigationUI = () => {
       name: "Mobile App Development",
       description: "Crafting impactful mobile solutions",
       icon: <AppShortcutIcon className="text-amber-600" />,
-      color: "#fde68a",
+      color: "#fef3c7",
     },
     {
       id: 4,
       name: "Cybersecurity Services",
       description: "Protecting your digital realm",
       icon: <SecurityIcon className="text-lime-600" />,
-      color: "#d9f99d",
+      color: "#ecfccb",
     },
     {
       id: 5,
       name: "Software Development",
       description: "Creating tailored software solutions",
       icon: <ApiIcon className="text-pink-600" />,
-      color: "#fbcfe8",
+      color: "#fce7f3",
     },
     {
       id: 6,
       name: "Data Analytics",
       description: "Unleashing insights from your data",
       icon: <PieChartIcon className="rotate-45 text-fuchsia-600" />,
-      color: "#f5d0fe",
+      color: "#fae8ff",
     },
   ];
   return (
@@ -84,7 +83,7 @@ export const NavigationUI = () => {
           <Link className="outline-none focus-visible:outline-2 focus-visible:outline-pink-600 focus-visible:outline-offset-1">
             Product
           </Link>
-          <MenuTrigger>
+          <MenuTrigger defaultOpen>
             <Button
               aria-label="Menu"
               className="outline-none flex items-center gap-0.5 focus-visible:outline-2 focus-visible:outline-pink-600 focus-visible:outline-offset-1"
@@ -99,13 +98,14 @@ export const NavigationUI = () => {
               className="entering:animate-in entering:fade-in exiting:animate-out exiting:fade-out"
             >
               <Menu
+                selectionMode="single"
                 items={items}
                 className={`grid outline-none gap-2 md:grid-cols-2 p-2 rounded-3xl bg-white ${poppins.className} shadow-2xl`}
               >
                 {(item) => (
                   <MenuItem
                     style={{ color: item.color }}
-                    className="group cursor-pointer grid bg-transparent hover:bg-current hover:bg-white grid-cols-[min-content_1fr_24px] gap-2 p-2 items-center
+                    className="group cursor-pointer grid bg-transparent hover:bg-current selected:bg-current grid-cols-[min-content_1fr_24px] gap-2 p-2 items-center
                   rounded-2xl outline-none focus-visible:outline-2 focus-visible:outline-pink-600 focus-visible:-outline-offset-1"
                   >
                     <span className="p-1">{item.icon}</span>
@@ -117,10 +117,9 @@ export const NavigationUI = () => {
                         {item.description}
                       </Text>
                     </div>
-                    <ArrowForwardIcon
-                      className="hidden group-hover:block text-gray-800"
-                      fontSize="small"
-                    />
+                    <span className="hidden group-hover:block text-gray-800">
+                      <ArrowForwardIcon fontSize="small" />
+                    </span>
                   </MenuItem>
                 )}
               </Menu>
