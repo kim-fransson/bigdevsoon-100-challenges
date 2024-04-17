@@ -40,6 +40,7 @@ import {
   MovieTicket,
   MusicEvents,
   MusicFestival,
+  NavigationUI,
   NewsLetter,
   Notifications,
   PasswordGenerator,
@@ -132,4 +133,5 @@ export const challenges = [
   { day: 63, title: "Weather App", solution: WeatherApp },
   { day: 64, title: "Document Manager", solution: DocumentManager },
   { day: 65, title: "Interests", solution: Interests },
+  { day: 66, title: "Navigation UI", solution: NavigationUI },
 ];

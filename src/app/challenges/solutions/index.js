@@ -39,6 +39,7 @@ export * from "./MobileNavigation";
 export * from "./MovieTicket";
 export * from "./MusicEvents";
 export * from "./MusicFestival";
+export * from "./NavigationUI";
 export * from "./Newsletter";
 export * from "./Notifications";
 export * from "./PasswordGenerator";
