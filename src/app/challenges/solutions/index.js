@@ -53,6 +53,7 @@ export * from "./QRCodeScanner";
 export * from "./RateUs";
 export * from "./Recipe";
 export * from "./RestaurantReservation";
+export * from "./SelectAccount";
 export * from "./SettingsAppearance";
 export * from "./ShoppingList";
 export * from "./SignUp";

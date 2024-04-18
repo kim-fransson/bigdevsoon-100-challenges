@@ -54,6 +54,7 @@ import {
   RateUs,
   Recipe,
   RestaurantReservation,
+  SelectAccount,
   SettingsAppearance,
   ShoppingList,
   SignUp,
@@ -134,4 +135,5 @@ export const challenges = [
   { day: 64, title: "Document Manager", solution: DocumentManager },
   { day: 65, title: "Interests", solution: Interests },
   { day: 66, title: "Navigation UI", solution: NavigationUI },
+  { day: 67, title: "Select Account", solution: SelectAccount },
 ];
