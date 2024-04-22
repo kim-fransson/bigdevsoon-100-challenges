@@ -63,6 +63,7 @@ import {
   Testimonials,
   UploadImage,
   UserProfile,
+  UserSatisfaction,
   VideoPlayer,
   WeatherApp,
   WebsiteLaunch,
@@ -136,4 +137,5 @@ export const challenges = [
   { day: 65, title: "Interests", solution: Interests },
   { day: 66, title: "Navigation UI", solution: NavigationUI },
   { day: 67, title: "Select Account", solution: SelectAccount },
+  { day: 68, title: "User Satisfaction", solution: UserSatisfaction },
 ];
