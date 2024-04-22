@@ -48,6 +48,7 @@ import {
   PlayerProfile,
   PricingPlans,
   ProfileCard,
+  ProfileSettings,
   ProgressBars,
   ProjectRoadmap,
   QRCodeScanner,
@@ -138,4 +139,5 @@ export const challenges = [
   { day: 66, title: "Navigation UI", solution: NavigationUI },
   { day: 67, title: "Select Account", solution: SelectAccount },
   { day: 68, title: "User Satisfaction", solution: UserSatisfaction },
+  { day: 69, title: "Profile Settings", solution: ProfileSettings },
 ];
