@@ -28,8 +28,8 @@ export const PasswordGenerator = () => {
   const [generatedPassword, setGeneratedPassword] = useState();
 
   useEffect(() => {
-    setGeneratedPassword(generatePassword(settings))
-  }, [])
+    setGeneratedPassword(generatePassword(settings));
+  }, []);
 
   const disableGeneratePassword = useMemo(() => {
     return (
@@ -45,7 +45,9 @@ export const PasswordGenerator = () => {
   }, [settings]);
 
   return (
-    <main className={`min-h-dvh flex justify-center items-center md:bg-[#f7e8ff] bg-[#090212] text-[#f3f2f4] ${lato.className}`}>
+    <main
+      className={`min-h-dvh flex justify-center items-center md:bg-[#f7e8ff] bg-[#090212] text-[#f3f2f4] ${lato.className}`}
+    >
       <div className="bg-[#090212] md:rounded-xl md:shadow-2xl p-8 flex flex-col md:max-w-md w-full">
         <h2 className="font-bold text-3xl">Generate password</h2>
 
@@ -192,7 +194,9 @@ const GeneratedPassword = ({
   const [copiedText, copyToClipboard] = useCopyToClipboard();
   return (
     <div className={className}>
-      <h3 className="text-[#605b66] text-sm font-bold mb-2">GENERATED PASSWORD</h3>
+      <h3 className="text-[#605b66] text-sm font-bold mb-2">
+        GENERATED PASSWORD
+      </h3>
       <div className="bg-[#26163b] px-2.5 py-3 rounded-2xl flex items-center justify-between gap-4">
         <p className="text-white font-bold select-none truncate">{password}</p>
         <div className="flex items-center gap-2">

@@ -9,6 +9,7 @@ import {
   CardWallet,
   CodeVerification,
   ContactUs,
+  CookiesBanner,
   CreateAccount,
   CreateTask,
   CreateWorkspace,
@@ -140,4 +141,5 @@ export const challenges = [
   { day: 67, title: "Select Account", solution: SelectAccount },
   { day: 68, title: "User Satisfaction", solution: UserSatisfaction },
   { day: 69, title: "Profile Settings", solution: ProfileSettings },
+  { day: 70, title: "CookiesBanner", solution: CookiesBanner },
 ];
