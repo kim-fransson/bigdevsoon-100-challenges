@@ -80,7 +80,7 @@ export const UserSatisfaction = () => {
         </RadioGroup>
         <TextField className="col-span-2 grid gap-2">
           <Label className="font-medium">
-            Do you have any thought to you&lsquo;d like to share
+            Do you have any thought to you&lsquo;d like to share?
           </Label>
           <TextArea
             placeholder="Your opinion..."
