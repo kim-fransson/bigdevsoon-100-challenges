@@ -17,6 +17,7 @@ import {
   Dashboard,
   DocumentManager,
   DownloadApp,
+  EmailClient,
   ExploreFlights,
   ExportFile,
   FAQ,
@@ -141,5 +142,6 @@ export const challenges = [
   { day: 67, title: "Select Account", solution: SelectAccount },
   { day: 68, title: "User Satisfaction", solution: UserSatisfaction },
   { day: 69, title: "Profile Settings", solution: ProfileSettings },
-  { day: 70, title: "CookiesBanner", solution: CookiesBanner },
+  { day: 70, title: "Cookies Banner", solution: CookiesBanner },
+  { day: 71, title: "Email Client", solution: EmailClient },
 ];
