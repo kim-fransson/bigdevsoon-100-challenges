@@ -28,7 +28,7 @@ export const PushNotifications = () => {
         </h2>
         <div className="flex gap-3 items-center">
           <NotificationsActiveRoundedIcon className="text-[#6b46c1] bg-neutral-50 rounded-full p-0.5" />
-          <span className="mb-0.5">https://app.bigdevsoon.me/challenges</span>
+          <span className="mb-0.5">app.bigdevsoon.me</span>
         </div>
         <Group className="inline-flex ml-auto gap-2">
           <Button
