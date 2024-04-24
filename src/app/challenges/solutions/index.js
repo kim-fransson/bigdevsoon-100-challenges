@@ -53,6 +53,7 @@ export * from "./ProfileCard";
 export * from "./ProfileSettings";
 export * from "./ProgressBars";
 export * from "./ProjectRoadmap";
+export * from "./PushNotifications";
 export * from "./QRCodeScanner";
 export * from "./RateUs";
 export * from "./Recipe";

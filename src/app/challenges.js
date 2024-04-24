@@ -54,6 +54,7 @@ import {
   ProfileSettings,
   ProgressBars,
   ProjectRoadmap,
+  PushNotifications,
   QRCodeScanner,
   RateUs,
   Recipe,
@@ -146,4 +147,5 @@ export const challenges = [
   { day: 70, title: "Cookies Banner", solution: CookiesBanner },
   { day: 71, title: "Email Client", solution: EmailClient },
   { day: 72, title: "Image Collections", solution: ImageCollections },
+  { day: 73, title: "Push Notifications", solution: PushNotifications },
 ];
