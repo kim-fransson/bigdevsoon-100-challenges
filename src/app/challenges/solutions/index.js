@@ -28,6 +28,7 @@ export * from "./HomePage";
 export * from "./HostingFeatures";
 export * from "./HotelBooking";
 export * from "./ImageCarousel";
+export * from "./ImageCollections";
 export * from "./ImagePreview";
 export * from "./Interests";
 export * from "./Invoices";

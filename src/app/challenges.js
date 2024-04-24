@@ -29,6 +29,7 @@ import {
   HostingFeatures,
   HotelBooking,
   ImageCarousel,
+  ImageCollections,
   ImagePreview,
   Interests,
   Invoices,
@@ -144,4 +145,5 @@ export const challenges = [
   { day: 69, title: "Profile Settings", solution: ProfileSettings },
   { day: 70, title: "Cookies Banner", solution: CookiesBanner },
   { day: 71, title: "Email Client", solution: EmailClient },
+  { day: 72, title: "Image Collections", solution: ImageCollections },
 ];
