@@ -36,6 +36,7 @@ import {
   JobBoard,
   LanguageApp,
   LeaderBoards,
+  ManageAccounts,
   MarkdownPost,
   MeetingSchedule,
   Messages,
@@ -148,4 +149,5 @@ export const challenges = [
   { day: 71, title: "Email Client", solution: EmailClient },
   { day: 72, title: "Image Collections", solution: ImageCollections },
   { day: 73, title: "Push Notifications", solution: PushNotifications },
+  { day: 74, title: "Manage Accounts", solution: ManageAccounts },
 ];
