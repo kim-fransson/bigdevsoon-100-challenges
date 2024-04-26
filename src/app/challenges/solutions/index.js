@@ -73,3 +73,4 @@ export * from "./VideoPlayer";
 export * from "./VideoPlayer";
 export * from "./WeatherApp";
 export * from "./WebsiteLaunch";
+export * from "./AddShot";

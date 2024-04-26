@@ -1,4 +1,5 @@
 import {
+  AddShot,
   AddToBag,
   AppNavigation,
   ArticleSlider,
@@ -150,4 +151,5 @@ export const challenges = [
   { day: 72, title: "Image Collections", solution: ImageCollections },
   { day: 73, title: "Push Notifications", solution: PushNotifications },
   { day: 74, title: "Manage Accounts", solution: ManageAccounts },
+  { day: 75, title: "Add Shot", solution: AddShot },
 ];
