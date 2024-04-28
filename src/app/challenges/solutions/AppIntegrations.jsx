@@ -5,6 +5,7 @@ import { Search } from "@mui/icons-material";
 import { useState } from "react";
 import { useFocusRing } from "react-aria";
 import {
+  Checkbox,
   GridList,
   GridListItem,
   Input,
@@ -48,7 +49,6 @@ const radioStyles = tv({
 export const AppIntegrations = () => {
   const { focusProps, isFocused } = useFocusRing();
   const [activeFilter, setActiveFilter] = useState("all apps");
-  const [selectedAppID, setSelectedAppID] = useState(1);
 
   return (
     <main
@@ -116,13 +116,10 @@ export const AppIntegrations = () => {
 
         <GridList
           items={apps}
-          selectionMode="single"
+          selectionMode="multiple"
+          defaultSelectedKeys={[1]}
           aria-label="Favorite pokemon"
           className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mt-8"
-          selectedKeys={[selectedAppID]}
-          onSelectionChange={(set) => {
-            setSelectedAppID(Array.from(set)[0]);
-          }}
         >
           {(item) => (
             <GridListItem
@@ -144,12 +141,7 @@ export const AppIntegrations = () => {
                     >
                       {item.icon}
                     </span>
-                    <CustomSwitch
-                      isSelected={isSelected}
-                      onChange={(v) => {}}
-                      slot="selection"
-                      aria-label="selected"
-                    />
+                    <CustomCheckbox slot="selection" aria-label="selected" />
                   </header>
                   <h2 className="font-semibold text-neutral-800/90">
                     {item.name}
@@ -254,9 +246,9 @@ const apps = [
   },
 ];
 
-const CustomSwitch = ({ children, ...props }) => {
+const CustomCheckbox = ({ children, ...props }) => {
   return (
-    <Switch
+    <Checkbox
       {...props}
       className="flex items-center gap-4 cursor-pointer justify-between font-medium text-lg"
     >
@@ -278,6 +270,6 @@ const CustomSwitch = ({ children, ...props }) => {
           />
         </>
       )}
-    </Switch>
+    </Checkbox>
   );
 };
