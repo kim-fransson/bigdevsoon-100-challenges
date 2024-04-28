@@ -1,4 +1,6 @@
+export * from "./AddShot";
 export * from "./AddToBag";
+export * from "./AppIntegrations";
 export * from "./AppNavigation";
 export * from "./ArticleSlider";
 export * from "./ArticleSummary";
@@ -73,4 +75,3 @@ export * from "./VideoPlayer";
 export * from "./VideoPlayer";
 export * from "./WeatherApp";
 export * from "./WebsiteLaunch";
-export * from "./AddShot";
