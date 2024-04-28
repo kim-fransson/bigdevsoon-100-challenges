@@ -118,7 +118,7 @@ export const AppIntegrations = () => {
           items={apps}
           selectionMode="multiple"
           defaultSelectedKeys={[1]}
-          aria-label="Favorite pokemon"
+          aria-label="apps"
           className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mt-8"
         >
           {(item) => (
