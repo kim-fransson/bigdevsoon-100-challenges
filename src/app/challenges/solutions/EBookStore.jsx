@@ -16,7 +16,7 @@ const focusRing = tv({
 
 const linkStyles = tv({
   extend: focusRing,
-  base: "font-medium cursor-pointer",
+  base: "font-medium cursor-pointer whitespace-nowrap",
 });
 
 const bookStyles = tv({
@@ -48,7 +48,7 @@ export const EBookStore = () => {
             BookBeat
           </span>
           <ListBox
-            className="flex items-center gap-8"
+            className="flex items-center gap-x-8 gap-y-2 flex-wrap"
             orientation="horizontal"
             items={[
               { name: "E-books" },
@@ -122,7 +122,7 @@ export const EBookStore = () => {
             <div className="lg:block hidden rounded-full size-52 bg-[#bd261b] absolute bottom-0 translate-y-1/2 right-0 translate-x-1/2"></div>
           </div>
 
-          <div className="mt-8">
+          <div className="my-8">
             <div className="flex items-center gap-4 justify-between">
               <h3 className="text-xl font-semibold">Today&lsquo;s hits</h3>
               <Button
