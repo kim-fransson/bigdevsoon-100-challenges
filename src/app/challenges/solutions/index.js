@@ -19,6 +19,7 @@ export * from "./CustomerList";
 export * from "./Dashboard";
 export * from "./DocumentManager";
 export * from "./DownloadApp";
+export * from "./EBookStore";
 export * from "./EmailClient";
 export * from "./ExploreFlights";
 export * from "./ExportFile";
