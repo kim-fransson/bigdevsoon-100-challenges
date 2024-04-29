@@ -40,10 +40,10 @@ const buttonStyles = tv({
 export const EBookStore = () => {
   return (
     <main
-      className={`bg-white flex items-center text-neutral-800 justify-center ${roboto.className}`}
+      className={`bg-white flex items-center text-neutral-800 justify-center px-4 ${roboto.className}`}
     >
       <div className="max-w-screen-lg w-full bg-white min-h-dvh">
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex flex-wrap items-center justify-between py-4 gap-2">
           <span className={`${fredoka.className} font-medium text-2xl`}>
             BookBeat
           </span>
@@ -75,7 +75,7 @@ export const EBookStore = () => {
         </nav>
         <section className="mt-8">
           <div className="bg-pink-200 overflow-clip relative p-12 rounded-lg grid grid-cols-2 items-center justify-items-center gap-4 text-neutral-800/85">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 lg:col-span-1 col-span-2">
               <h2 className="text-4xl">
                 Listen to audio books for{" "}
                 <span className="font-bold text-neutral-800">
@@ -114,10 +114,12 @@ export const EBookStore = () => {
                 </Button>
               </Group>
             </div>
-            <span className="text-[12rem] z-10 text-white">📚</span>
-            <div className="rounded-full size-96 bg-[#5a67a7] absolute top-0 -translate-y-1/3 translate-x-1/3 right-0"></div>
-            <div className="rounded-full size-52 bg-[#77b860] absolute bottom-0 translate-y-1/2 right-[20%]"></div>
-            <div className="rounded-full size-52 bg-[#bd261b] absolute bottom-0 translate-y-1/2 right-0 translate-x-1/2"></div>
+            <span className="lg:block hidden text-[12rem] z-10 text-white">
+              📚
+            </span>
+            <div className="lg:block hidden rounded-full size-96 bg-[#5a67a7] absolute top-0 -translate-y-1/3 translate-x-1/3 right-0"></div>
+            <div className="lg:block hidden rounded-full size-52 bg-[#77b860] absolute bottom-0 translate-y-1/2 right-[20%]"></div>
+            <div className="lg:block hidden rounded-full size-52 bg-[#bd261b] absolute bottom-0 translate-y-1/2 right-0 translate-x-1/2"></div>
           </div>
 
           <div className="mt-8">
@@ -134,7 +136,7 @@ export const EBookStore = () => {
             <ListBox
               items={books}
               orientation="horizontal"
-              className="grid grid-cols-5 mt-4 gap-4"
+              className="grid lg:grid-cols-5 md:grid-cols-2 mt-4 gap-4"
             >
               {(item) => (
                 <ListBoxItem
