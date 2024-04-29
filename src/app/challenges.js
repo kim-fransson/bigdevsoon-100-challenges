@@ -5,6 +5,7 @@ import {
   AppNavigation,
   ArticleSlider,
   ArticleSummary,
+  AudioPlayer,
   BillingPage,
   BrandVisualizer,
   CalculateTip,
@@ -155,4 +156,5 @@ export const challenges = [
   { day: 75, title: "Add Shot", solution: AddShot },
   { day: 76, title: "TBD", solution: undefined },
   { day: 77, title: "App Integrations", solution: AppIntegrations },
+  { day: 78, title: "Audio Player", solution: AudioPlayer },
 ];

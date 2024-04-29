@@ -4,6 +4,7 @@ export * from "./AppIntegrations";
 export * from "./AppNavigation";
 export * from "./ArticleSlider";
 export * from "./ArticleSummary";
+export * from "./AudioPlayer";
 export * from "./BillingPage";
 export * from "./BrandVisualizer";
 export * from "./CalculateTip";
