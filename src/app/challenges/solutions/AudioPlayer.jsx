@@ -28,17 +28,17 @@ const buttonStyles = tv({
 });
 
 export const AudioPlayer = () => {
-  // const {
-  //   toggleSound,
-  //   isPlaying,
-  //   duration,
-  //   currentTime,
-  //   updateCurrentTime,
-  //   volume,
-  //   updateVolume,
-  // } = useSound(`/challenges/78/song.mp3`);
+  const {
+    toggleSound,
+    isPlaying,
+    duration,
+    currentTime,
+    updateCurrentTime,
+    volume,
+    updateVolume,
+  } = useSound(`/challenges/78/song.mp3`);
 
-  // const previousVolume = usePrevious(volume);
+  const previousVolume = usePrevious(volume);
 
   const toggleMute = () => {
     if (volume === 0) {
@@ -65,8 +65,8 @@ export const AudioPlayer = () => {
 
         <div className="bg-violet-100 flex items-center gap-4 rounded-full pl-2.5 pr-8 py-2">
           <ToggleButton
-            isSelected={true}
-            // onChange={toggleSound}
+            isSelected={isPlaying}
+            onChange={toggleSound}
             className={buttonStyles({
               class: "p-1 rounded-full bg-violet-400 text-neutral-50",
             })}
@@ -77,14 +77,14 @@ export const AudioPlayer = () => {
           </ToggleButton>
 
           <Progress
-            progress={30}
-            duration={120}
-            // onChange={updateCurrentTime}
+            progress={currentTime}
+            duration={duration}
+            onChange={updateCurrentTime}
           />
 
           <ToggleButton
-            isSelected={true}
-            // onChange={toggleMute}
+            isSelected={volume > 0}
+            onChange={toggleMute}
             className={buttonStyles({
               class:
                 "p-1 rounded-full hover:bg-violet-400 hover:text-neutral-50 text-neutral-800/70",
