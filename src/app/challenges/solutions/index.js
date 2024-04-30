@@ -51,6 +51,7 @@ export * from "./NavigationUI";
 export * from "./Newsletter";
 export * from "./Notifications";
 export * from "./PasswordGenerator";
+export * from "./PaymentPlan";
 export * from "./PlayerProfile";
 export * from "./PlayList";
 export * from "./PricingPlans";

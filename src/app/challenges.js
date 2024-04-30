@@ -52,6 +52,7 @@ import {
   NewsLetter,
   Notifications,
   PasswordGenerator,
+  PaymentPlan,
   PlayList,
   PlayerProfile,
   PricingPlans,
@@ -158,4 +159,5 @@ export const challenges = [
   { day: 76, title: "E-Book Store", solution: EBookStore },
   { day: 77, title: "App Integrations", solution: AppIntegrations },
   { day: 78, title: "Audio Player", solution: AudioPlayer },
+  { day: 79, title: "Payment Plan", solution: PaymentPlan },
 ];
