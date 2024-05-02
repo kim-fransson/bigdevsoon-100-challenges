@@ -41,7 +41,7 @@ export const DeliveryDetails = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-around">
+          <div className="flex flex-col items-center justify-around py-4">
             {states.map((state, index) => (
               <>
                 <div
