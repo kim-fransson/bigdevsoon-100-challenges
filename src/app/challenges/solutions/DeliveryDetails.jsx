@@ -41,12 +41,12 @@ export const DeliveryDetails = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-around">
             {states.map((state, index) => (
               <>
                 <div
                   className={twMerge(
-                    "size-6 shadow-md relative rounded-full after:content-[''] after:absolute after:size-3 after:rounded-full",
+                    "size-6 shadow-md shrink-0 relative rounded-full after:content-[''] after:absolute after:size-3 after:rounded-full",
                     "after:-translate-x-1/2 after:left-1/2 after:top-1/2 after:-translate-y-1/2",
                     index === 0
                       ? "bg-neutral-100 after:bg-yellow-400"
@@ -55,7 +55,7 @@ export const DeliveryDetails = () => {
                   key={state.state}
                 ></div>
                 {index !== states.length - 1 && (
-                  <div className="h-10 w-[1.5px] bg-neutral-800"></div>
+                  <div className="h-full w-[1.5px] bg-neutral-800"></div>
                 )}
               </>
             ))}
