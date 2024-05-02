@@ -19,6 +19,7 @@ import {
   CreateWorkspace,
   CustomerList,
   Dashboard,
+  DeliveryDetails,
   DocumentManager,
   DownloadApp,
   EBookStore,
@@ -162,4 +163,5 @@ export const challenges = [
   { day: 78, title: "Audio Player", solution: AudioPlayer },
   { day: 79, title: "Payment Plan", solution: PaymentPlan },
   { day: 80, title: "Articles Grid", solution: ArticlesGrid },
+  { day: 81, title: "Delivery Details", solution: DeliveryDetails },
 ];

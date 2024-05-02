@@ -18,6 +18,7 @@ export * from "./CreateTask";
 export * from "./CreateWorkspace";
 export * from "./CustomerList";
 export * from "./Dashboard";
+export * from "./DeliveryDetails";
 export * from "./DocumentManager";
 export * from "./DownloadApp";
 export * from "./EBookStore";
