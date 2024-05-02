@@ -11,7 +11,7 @@ export const DeliveryDetails = () => {
     >
       <div className="rounded-2xl shadow-2xl bg-neutral-50 text-neutral-800 px-5 pt-10 py-8 max-w-screen-sm w-full">
         <h2 className="text-xl font-semibold">Delivery Details</h2>
-        <pairlist className="bg-neutral-200/80 p-4 rounded-xl flex flex-col mt-4 gap-4">
+        <pairlist className="bg-neutral-200/40 p-4 rounded-xl flex flex-col mt-4 gap-4">
           <pair className="flex justify-between gap-4">
             <key className="font-medium">Track number</key>
             <value>
@@ -29,7 +29,7 @@ export const DeliveryDetails = () => {
 
         <h3 className="text-lg font-semibold mt-8">Tracking History</h3>
 
-        <div className="bg-neutral-200/80 p-4 rounded-xl mt-4 grid grid-cols-[auto_1fr_1fr]">
+        <div className="bg-neutral-200/40 p-4 rounded-xl mt-4 grid grid-cols-[auto_1fr_1fr]">
           <div className="flex flex-col gap-3 justify-between">
             {states.map((state) => (
               <div className="flex flex-col gap-1" key={state.state}>
@@ -49,13 +49,13 @@ export const DeliveryDetails = () => {
                     "size-6 shadow-md relative rounded-full after:content-[''] after:absolute after:size-3 after:rounded-full",
                     "after:-translate-x-1/2 after:left-1/2 after:top-1/2 after:-translate-y-1/2",
                     index === 0
-                      ? "bg-neutral-100 after:bg-yellow-300"
+                      ? "bg-neutral-100 after:bg-yellow-400"
                       : "bg-neutral-200 after:bg-neutral-800",
                   )}
                   key={state.state}
                 ></div>
                 {index !== states.length - 1 && (
-                  <div className="h-10 w-[1px] bg-neutral-800"></div>
+                  <div className="h-10 w-[1.5px] bg-neutral-800"></div>
                 )}
               </>
             ))}
