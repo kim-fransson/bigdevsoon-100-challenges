@@ -5,6 +5,7 @@ import {
   AppNavigation,
   ArticleSlider,
   ArticleSummary,
+  ArticlesGrid,
   AudioPlayer,
   BillingPage,
   BrandVisualizer,
@@ -160,4 +161,5 @@ export const challenges = [
   { day: 77, title: "App Integrations", solution: AppIntegrations },
   { day: 78, title: "Audio Player", solution: AudioPlayer },
   { day: 79, title: "Payment Plan", solution: PaymentPlan },
+  { day: 80, title: "Articles Grid", solution: ArticlesGrid },
 ];

@@ -2,6 +2,7 @@ export * from "./AddShot";
 export * from "./AddToBag";
 export * from "./AppIntegrations";
 export * from "./AppNavigation";
+export * from "./ArticlesGrid";
 export * from "./ArticleSlider";
 export * from "./ArticleSummary";
 export * from "./AudioPlayer";
