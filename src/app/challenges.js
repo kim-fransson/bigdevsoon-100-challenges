@@ -12,6 +12,7 @@ import {
   CalculateTip,
   CardWallet,
   CodeVerification,
+  ColorPalette,
   ContactUs,
   CookiesBanner,
   CreateAccount,
@@ -164,4 +165,5 @@ export const challenges = [
   { day: 79, title: "Payment Plan", solution: PaymentPlan },
   { day: 80, title: "Articles Grid", solution: ArticlesGrid },
   { day: 81, title: "Delivery Details", solution: DeliveryDetails },
+  { day: 82, title: "Color Palette", solution: ColorPalette },
 ];
