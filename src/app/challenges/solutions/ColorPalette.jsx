@@ -89,62 +89,47 @@ const isValidHexColor = (color) => {
   return hexRegex.test(color);
 };
 
-const generateColorPalette = (baseColor) => {
-  // Function to convert hex to RGB
+const generateColorPalette = (inputHex) => {
   const hexToRgb = (hex) => {
-    const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, (m, r, g, b) => {
-      return r + r + g + g + b + b;
-    });
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-      ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
-        }
-      : null;
+    const bigint = parseInt(hex.replace(/^#/, ""), 16);
+    const red = (bigint >> 16) & 255;
+    const green = (bigint >> 8) & 255;
+    const blue = bigint & 255;
+    return { red, green, blue };
   };
 
-  // Function to convert RGB to hex
   const rgbToHex = (rgb) => {
     return (
       "#" +
-      ((1 << 24) + (rgb.r << 16) + (rgb.g << 8) + rgb.b).toString(16).slice(1)
+      ((1 << 24) + (rgb.red << 16) + (rgb.green << 8) + rgb.blue)
+        .toString(16)
+        .slice(1)
     );
   };
 
-  const baseRgb = hexToRgb(baseColor);
+  const generateRandomColor = (mix) => {
+    const random = () => Math.floor(Math.random() * 256);
+    let red = random();
+    let green = random();
+    let blue = random();
 
-  // Check if the base color is valid
-  if (!baseRgb) {
-    return [];
-  }
-
-  // Generate color palette based on the base color
-  const palette = [];
-  palette.push(baseColor);
-
-  // Generate four additional colors based on the base color
-  const increments = [20, 40, 60, 80];
-  for (let i = 0; i < increments.length; i++) {
-    const newRgb = {
-      r: Math.max(0, Math.min(255, baseRgb.r + increments[i])),
-      g: Math.max(0, Math.min(255, baseRgb.g + increments[i])),
-      b: Math.max(0, Math.min(255, baseRgb.b + increments[i])),
-    };
-    const newHex = rgbToHex(newRgb);
-    if (!palette.includes(newHex)) {
-      palette.push(newHex);
+    // mix the color
+    if (mix !== null && typeof mix === "object") {
+      red = Math.floor((red + mix.red) / 2); // Round down to integer
+      green = Math.floor((green + mix.green) / 2); // Round down to integer
+      blue = Math.floor((blue + mix.blue) / 2); // Round down to integer
     }
-  }
 
-  // Ensure palette has exactly 5 colors
-  while (palette.length < 5) {
-    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    if (!palette.includes(randomColor)) {
-      palette.push(randomColor);
-    }
+    const color = { red, green, blue };
+    return color;
+  };
+
+  const inputRgb = hexToRgb(inputHex);
+  const palette = [inputHex];
+
+  for (let i = 1; i < 5; i++) {
+    const color = generateRandomColor(inputRgb);
+    palette.push(rgbToHex(color));
   }
 
   return palette;
