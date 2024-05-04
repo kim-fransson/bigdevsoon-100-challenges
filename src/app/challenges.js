@@ -73,6 +73,7 @@ import {
   ShoppingList,
   SignUp,
   SleepApp,
+  SocialsShare,
   TaskBoard,
   Testimonials,
   UploadImage,
@@ -166,4 +167,5 @@ export const challenges = [
   { day: 80, title: "Articles Grid", solution: ArticlesGrid },
   { day: 81, title: "Delivery Details", solution: DeliveryDetails },
   { day: 82, title: "Color Palette", solution: ColorPalette },
+  { day: 83, title: "Socials Share", solution: SocialsShare },
 ];
