@@ -123,7 +123,7 @@ const CopyLink = () => {
     <>
       <ListBox
         orientation="horizontal"
-        className="flex divide-x-2 divide-[#d0d0d0] -mx-4 -my-2 min-w-[350px]"
+        className="flex divide-x-2 divide-[#d0d0d0] -mx-4 -my-2 w-full max-w-[350px]"
       >
         <ListBoxItem className={listboxItemStyles()}>
           <FaGooglePlusG className="text-2xl text-[#cb2411]" />

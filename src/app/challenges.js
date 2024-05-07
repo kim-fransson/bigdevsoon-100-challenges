@@ -19,6 +19,7 @@ import {
   CreateTask,
   CreateWorkspace,
   CustomerList,
+  CustomerReviews,
   Dashboard,
   DeliveryDetails,
   DocumentManager,
@@ -168,4 +169,6 @@ export const challenges = [
   { day: 81, title: "Delivery Details", solution: DeliveryDetails },
   { day: 82, title: "Color Palette", solution: ColorPalette },
   { day: 83, title: "Socials Share", solution: SocialsShare },
+  { day: 84, title: "TBD", solution: undefined },
+  { day: 85, title: "Customer Reviews", solution: CustomerReviews },
 ];
