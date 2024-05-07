@@ -9,6 +9,7 @@ import {
   AudioPlayer,
   BillingPage,
   BrandVisualizer,
+  BuyADrink,
   CalculateTip,
   CardWallet,
   CodeVerification,
@@ -169,6 +170,6 @@ export const challenges = [
   { day: 81, title: "Delivery Details", solution: DeliveryDetails },
   { day: 82, title: "Color Palette", solution: ColorPalette },
   { day: 83, title: "Socials Share", solution: SocialsShare },
-  { day: 84, title: "TBD", solution: undefined },
+  { day: 84, title: "Buy a Coffee", solution: BuyADrink },
   { day: 85, title: "Customer Reviews", solution: CustomerReviews },
 ];
