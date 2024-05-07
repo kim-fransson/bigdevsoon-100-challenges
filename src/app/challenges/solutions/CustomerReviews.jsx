@@ -53,7 +53,7 @@ export const CustomerReviews = () => {
               alt=""
             />
           </div>
-          <div className="bg-red-100 rounded-lg overflow-hidden object-cover">
+          <div className="rounded-lg overflow-hidden object-cover">
             <Image
               width={0}
               height={0}
