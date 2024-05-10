@@ -112,17 +112,35 @@ export const Fingerprint = () => {
           </Link>
 
           <Group className="grid grid-cols-3 w-full h-full mt-4 items-center justify-items-center">
-            <DigitButton onPress={() => push(1)}>1</DigitButton>
-            <DigitButton onPress={() => push(2)}>2</DigitButton>
-            <DigitButton onPress={() => push(3)}>3</DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(1)}>
+              1
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(2)}>
+              2
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(3)}>
+              3
+            </DigitButton>
 
-            <DigitButton onPress={() => push(4)}>4</DigitButton>
-            <DigitButton onPress={() => push(5)}>5</DigitButton>
-            <DigitButton onPress={() => push(6)}>6</DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(4)}>
+              4
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(5)}>
+              5
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(6)}>
+              6
+            </DigitButton>
 
-            <DigitButton onPress={() => push(7)}>7</DigitButton>
-            <DigitButton onPress={() => push(8)}>8</DigitButton>
-            <DigitButton onPress={() => push(9)}>9</DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(7)}>
+              7
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(8)}>
+              8
+            </DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(9)}>
+              9
+            </DigitButton>
 
             <DigitButton
               onPress={() => {
@@ -132,7 +150,9 @@ export const Fingerprint = () => {
             >
               <FingerprintIcon />
             </DigitButton>
-            <DigitButton onPress={() => push(0)}>0</DigitButton>
+            <DigitButton isDisabled={list.length === 4} onPress={() => push(0)}>
+              0
+            </DigitButton>
             <DigitButton onPress={() => removeAt(list.length - 1)}>
               <BackspaceIcon />
             </DigitButton>
@@ -149,7 +169,7 @@ const DigitButton = (props) => {
       {...props}
       className="outline-none focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-green-600
       hover:bg-neutral-200/60 rounded-full aspect-square size-10 text-xl font-bold text-green-600 flex items-center justify-center
-      transition-all pressed:bg-neutral-200/60 pressed:scale-95 pressed:shadow-md pressed:shadow-green-800"
+      transition-all pressed:bg-neutral-200/60 pressed:scale-95 pressed:shadow-md pressed:shadow-green-800 disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {props.children}
     </Button>
