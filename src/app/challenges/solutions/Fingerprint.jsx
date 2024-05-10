@@ -1,6 +1,6 @@
 "use client";
 
-import { roboto } from "@/app/fonts";
+import { fredoka, roboto } from "@/app/fonts";
 import {
   Button,
   Link,
@@ -27,7 +27,7 @@ export const Fingerprint = () => {
   });
   return (
     <main
-      className={`${roboto.className} min-h-dvh bg-[#040c1f] flex items-center justify-center`}
+      className={`${fredoka.className} min-h-dvh bg-[#040c1f] flex items-center justify-center`}
     >
       <div
         className="lg:rounded-2xl lg:shadow-2xl lg:max-w-sm overflow-clip w-full bg-[#373d49] 
