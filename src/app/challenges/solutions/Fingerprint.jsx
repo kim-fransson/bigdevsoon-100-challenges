@@ -17,7 +17,7 @@ import { useClickAway, useList } from "@uidotdev/usehooks";
 import { FocusScope, useFocusManager } from "react-aria";
 
 export const Fingerprint = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [list, { push, removeAt, clear }] = useList([]);
 
