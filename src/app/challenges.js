@@ -30,6 +30,7 @@ import {
   ExploreFlights,
   ExportFile,
   FAQ,
+  Fingerprint,
   FlightTicket,
   FriendRequest,
   FurFriends,
@@ -170,6 +171,9 @@ export const challenges = [
   { day: 81, title: "Delivery Details", solution: DeliveryDetails },
   { day: 82, title: "Color Palette", solution: ColorPalette },
   { day: 83, title: "Socials Share", solution: SocialsShare },
-  { day: 84, title: "Buy a Coffee", solution: BuyADrink },
+  { day: 84, title: "Buy a Drink", solution: BuyADrink },
   { day: 85, title: "Customer Reviews", solution: CustomerReviews },
+  { day: 86, title: "TBD", solution: undefined },
+  { day: 87, title: "TBD", solution: undefined },
+  { day: 88, title: "Fingerprint", solution: Fingerprint },
 ];

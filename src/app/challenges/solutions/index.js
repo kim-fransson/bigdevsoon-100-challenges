@@ -29,6 +29,7 @@ export * from "./EmailClient";
 export * from "./ExploreFlights";
 export * from "./ExportFile";
 export * from "./FAQ";
+export * from "./Fingerprint";
 export * from "./FlightTicket";
 export * from "./FriendRequest";
 export * from "./FurFriends";
