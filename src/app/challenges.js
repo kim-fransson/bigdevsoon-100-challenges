@@ -54,6 +54,7 @@ import {
   MovieTicket,
   MusicEvents,
   MusicFestival,
+  MyDevices,
   NavigationUI,
   NewsLetter,
   Notifications,
@@ -178,4 +179,5 @@ export const challenges = [
   { day: 87, title: "TBD", solution: undefined },
   { day: 88, title: "Fingerprint", solution: Fingerprint },
   { day: 89, title: "Voice Call", solution: VoiceCall },
+  { day: 90, title: "My Devices", solution: MyDevices },
 ];
