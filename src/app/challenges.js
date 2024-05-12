@@ -83,6 +83,7 @@ import {
   UserProfile,
   UserSatisfaction,
   VideoPlayer,
+  VoiceCall,
   WeatherApp,
   WebsiteLaunch,
 } from "./challenges/solutions";
@@ -176,4 +177,5 @@ export const challenges = [
   { day: 86, title: "TBD", solution: undefined },
   { day: 87, title: "TBD", solution: undefined },
   { day: 88, title: "Fingerprint", solution: Fingerprint },
+  { day: 89, title: "Voice Call", solution: VoiceCall },
 ];
