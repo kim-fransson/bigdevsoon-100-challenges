@@ -70,6 +70,7 @@ import {
   ProjectRoadmap,
   PushNotifications,
   QRCodeScanner,
+  QuizApp,
   RateUs,
   Recipe,
   RestaurantReservation,
@@ -181,4 +182,5 @@ export const challenges = [
   { day: 88, title: "Fingerprint", solution: Fingerprint },
   { day: 89, title: "Voice Call", solution: VoiceCall },
   { day: 90, title: "My Devices", solution: MyDevices },
+  { day: 91, title: "QuizApp", solution: QuizApp },
 ];

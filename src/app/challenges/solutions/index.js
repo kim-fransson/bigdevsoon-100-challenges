@@ -69,6 +69,7 @@ export * from "./ProgressBars";
 export * from "./ProjectRoadmap";
 export * from "./PushNotifications";
 export * from "./QRCodeScanner";
+export * from "./QuizApp";
 export * from "./RateUs";
 export * from "./Recipe";
 export * from "./RestaurantReservation";
