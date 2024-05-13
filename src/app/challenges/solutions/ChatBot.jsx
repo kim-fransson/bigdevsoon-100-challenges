@@ -39,7 +39,7 @@ export const ChatBot = () => {
       className={`${fredoka.className} min-h-dvh p-4 flex justify-end items-end bg-[#e77f80]`}
     >
       <span ref={triggerRef}>
-        <DialogTrigger onOpenChange={setIsChatting}>
+        <DialogTrigger defaultOpen onOpenChange={setIsChatting}>
           <Button
             className={buttonStyles({
               class: [
@@ -150,7 +150,7 @@ export const ChatBot = () => {
       </span>
       <Popover
         triggerRef={triggerRef}
-        defaultOpen
+        // defaultOpen
         isNonModal={true}
         placement="left"
         offset={10}
