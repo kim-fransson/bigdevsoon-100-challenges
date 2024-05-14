@@ -81,6 +81,7 @@ import {
   SleepApp,
   SocialsShare,
   TaskBoard,
+  TaskManager,
   Testimonials,
   UploadImage,
   UserProfile,
@@ -183,4 +184,6 @@ export const challenges = [
   { day: 89, title: "Voice Call", solution: VoiceCall },
   { day: 90, title: "My Devices", solution: MyDevices },
   { day: 91, title: "QuizApp", solution: QuizApp },
+  { day: 92, title: "TBD", solution: undefined },
+  { day: 93, title: "Task Manager", solution: TaskManager },
 ];

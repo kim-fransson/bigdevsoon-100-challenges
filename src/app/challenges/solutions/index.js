@@ -80,6 +80,7 @@ export * from "./SignUp";
 export * from "./SleepApp";
 export * from "./SocialsShare";
 export * from "./TaskBoard";
+export * from "./TaskManager";
 export * from "./Testimonials";
 export * from "./UploadImage";
 export * from "./UserProfile";
