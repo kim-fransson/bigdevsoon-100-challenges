@@ -22,10 +22,13 @@ import { tv } from "tailwind-variants";
 
 import AddIcon from "@mui/icons-material/Add";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import { useState } from "react";
 import { NotificationsActiveOutlined } from "@mui/icons-material";
+import { twMerge } from "tailwind-merge";
 
 const focusRing = tv({
   base: "outline outline-violet-500 outline-offset-1 outline-0 focus-visible:outline-2",
@@ -64,7 +67,7 @@ const dateListItemStyles = tv({
 
 const todaysActivitiesItemStyles = tv({
   extend: focusRing,
-  base: ["rounded-lg flex items-center gap-2 bg-[#332b52] p-2"],
+  base: ["flex gap-4"],
 });
 
 export const TaskManager = () => {
@@ -201,23 +204,51 @@ const Overview = ({ setInOverview }) => {
         items={todaysActivities}
         orientation="vertical"
         aria-label="todays activities"
+        selectionMode="single"
       >
         {(item) => (
           <GridListItem
             className={todaysActivitiesItemStyles()}
             id={item.title}
           >
-            <span className="bg-[#514b67] text-3xl size-14 rounded-md grid place-content-center">
-              {item.emoji}
-            </span>
-            <div className="flex flex-col">
-              <span className="text-xs opacity-70">Today</span>
-              <span className="font-medium">{item.title}</span>
-              <div className="text-xs opacity-80 flex items-center gap-1">
-                <AccessTimeOutlinedIcon fontSize="inherit" />
-                {item.time_range}
-              </div>
-            </div>
+            {({ isFocusVisible, isSelected }) => (
+              <>
+                <div className="rounded-lg flex-1 flex items-center gap-2 bg-[#332b52] p-2">
+                  <span className="bg-[#514b67] text-3xl size-14 rounded-md grid place-content-center">
+                    {item.emoji}
+                  </span>
+                  <div className="flex flex-col">
+                    <span className="text-xs opacity-70">Today</span>
+                    <span className="font-medium">{item.title}</span>
+                    <div className="text-xs opacity-80 flex items-center gap-1">
+                      <AccessTimeOutlinedIcon fontSize="inherit" />
+                      {item.time_range}
+                    </div>
+                  </div>
+                </div>
+                <Group
+                  className={twMerge(
+                    "flex-col gap-2 justify-between",
+                    isSelected ? "flex" : "hidden",
+                  )}
+                >
+                  <Button
+                    className={buttonStyles({
+                      class: "bg-[#bc9457] p-1 rounded-md",
+                    })}
+                  >
+                    <DriveFileRenameOutlineOutlinedIcon />
+                  </Button>
+                  <Button
+                    className={buttonStyles({
+                      class: "bg-[#bd5859] p-1 rounded-md",
+                    })}
+                  >
+                    <DeleteOutlineOutlinedIcon />
+                  </Button>
+                </Group>
+              </>
+            )}
           </GridListItem>
         )}
       </GridList>
