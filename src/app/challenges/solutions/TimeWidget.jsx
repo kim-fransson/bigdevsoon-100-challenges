@@ -30,7 +30,7 @@ const buttonStyles = tv({
 });
 
 export const TimeWidget = () => {
-  const [count, setCount] = useState(817);
+  const [count, setCount] = useState(816);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
