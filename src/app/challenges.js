@@ -83,6 +83,7 @@ import {
   TaskBoard,
   TaskManager,
   Testimonials,
+  TimeWidget,
   UploadImage,
   UserProfile,
   UserSatisfaction,
@@ -186,4 +187,5 @@ export const challenges = [
   { day: 91, title: "QuizApp", solution: QuizApp },
   { day: 92, title: "TBD", solution: undefined },
   { day: 93, title: "Task Manager", solution: TaskManager },
+  { day: 94, title: "Time Widget", solution: TimeWidget },
 ];

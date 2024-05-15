@@ -90,3 +90,4 @@ export * from "./VideoPlayer";
 export * from "./VoiceCall";
 export * from "./WeatherApp";
 export * from "./WebsiteLaunch";
+export * from "./TimeWidget";
