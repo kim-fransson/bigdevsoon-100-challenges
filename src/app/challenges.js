@@ -59,6 +59,7 @@ import {
   MyDevices,
   NavigationUI,
   NewsLetter,
+  NotFound,
   Notifications,
   PasswordGenerator,
   PaymentPlan,
@@ -189,4 +190,5 @@ export const challenges = [
   { day: 92, title: "TBD", solution: undefined },
   { day: 93, title: "Task Manager", solution: TaskManager },
   { day: 94, title: "Time Widget", solution: TimeWidget },
+  { day: 95, title: "404", solution: NotFound },
 ];

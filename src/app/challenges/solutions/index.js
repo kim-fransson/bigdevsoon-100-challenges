@@ -58,6 +58,7 @@ export * from "./MusicFestival";
 export * from "./MyDevices";
 export * from "./NavigationUI";
 export * from "./Newsletter";
+export * from "./NotFound";
 export * from "./Notifications";
 export * from "./PasswordGenerator";
 export * from "./PaymentPlan";
