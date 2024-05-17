@@ -81,6 +81,7 @@ export * from "./ShoppingList";
 export * from "./SignUp";
 export * from "./SleepApp";
 export * from "./SocialsShare";
+export * from "./SubscribeCard";
 export * from "./TaskBoard";
 export * from "./TaskManager";
 export * from "./Testimonials";
