@@ -75,6 +75,7 @@ export * from "./QuizApp";
 export * from "./RateUs";
 export * from "./Recipe";
 export * from "./RestaurantReservation";
+export * from "./SearchFilters";
 export * from "./SelectAccount";
 export * from "./SettingsAppearance";
 export * from "./ShoppingList";
