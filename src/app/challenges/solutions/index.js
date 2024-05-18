@@ -24,6 +24,7 @@ export * from "./CustomerList";
 export * from "./CustomerReviews";
 export * from "./Dashboard";
 export * from "./DeliveryDetails";
+export * from "./DesignAssets";
 export * from "./DocumentManager";
 export * from "./DownloadApp";
 export * from "./EBookStore";

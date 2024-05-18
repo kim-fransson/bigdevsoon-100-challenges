@@ -25,6 +25,7 @@ import {
   CustomerReviews,
   Dashboard,
   DeliveryDetails,
+  DesignAssets,
   DocumentManager,
   DownloadApp,
   EBookStore,
@@ -194,4 +195,5 @@ export const challenges = [
   { day: 94, title: "Time Widget", solution: TimeWidget },
   { day: 95, title: "404", solution: NotFound },
   { day: 96, title: "Subscribe Card", solution: SubscribeCard },
+  { day: 97, title: "Design Assets", solution: DesignAssets },
 ];
