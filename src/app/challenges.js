@@ -95,6 +95,7 @@ import {
   UserSatisfaction,
   VideoPlayer,
   VoiceCall,
+  VoiceRecording,
   WeatherApp,
   WebsiteLaunch,
 } from "./challenges/solutions";
@@ -197,6 +198,6 @@ export const challenges = [
   { day: 95, title: "404", solution: NotFound },
   { day: 96, title: "Subscribe Card", solution: SubscribeCard },
   { day: 97, title: "Design Assets", solution: DesignAssets },
-  { day: 98, title: "TBD", solution: undefined },
+  { day: 98, title: "Voice Recording", solution: VoiceRecording },
   { day: 99, title: "Columns Card", solution: ColumnsCard },
 ];

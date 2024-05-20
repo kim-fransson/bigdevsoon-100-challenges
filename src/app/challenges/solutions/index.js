@@ -95,5 +95,6 @@ export * from "./UserSatisfaction";
 export * from "./VideoPlayer";
 export * from "./VideoPlayer";
 export * from "./VoiceCall";
+export * from "./VoiceRecording";
 export * from "./WeatherApp";
 export * from "./WebsiteLaunch";
