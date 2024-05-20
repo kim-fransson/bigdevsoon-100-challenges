@@ -11,6 +11,7 @@ import {
   Pause,
   Share,
   Delete,
+  ArrowBack,
 } from "@mui/icons-material";
 import { twMerge } from "tailwind-merge";
 import { useState } from "react";
@@ -38,6 +39,7 @@ const buttonStyles = tv({
 });
 
 export const VoiceRecording = () => {
+  const [showRecord, setShowRecord] = useState(false);
   return (
     <main
       className={`${fredoka.className} min-h-dvh flex items-center justify-center bg-[#e7c7c8] p-4`}
@@ -46,13 +48,70 @@ export const VoiceRecording = () => {
         className="w-full max-w-sm shadow-xl rounded-2xl px-4 py-5 bg-white text-neutral-800
       min-h-[600px] flex flex-col"
       >
-        <Recordings />
+        {showRecord ? (
+          <Record setShowRecord={setShowRecord} />
+        ) : (
+          <Recordings setShowRecord={setShowRecord} />
+        )}
       </div>
     </main>
   );
 };
 
-const Recordings = () => {
+const Record = ({ setShowRecord }) => {
+  return (
+    <div className="flex-1 flex flex-col w-full">
+      <header className="flex justify-between items-center relative mb-16">
+        <Button
+          onPress={() => setShowRecord(false)}
+          className={buttonStyles({
+            class: "left-0 -translate-y-1/2 top-1/2 absolute",
+          })}
+        >
+          <ArrowBack />
+        </Button>
+        <h1 className="text-center text-2xl text-neutral-600 font-semibold mx-auto">
+          Voice Recording
+        </h1>
+      </header>
+      <span
+        className="bg-[#fd8081] text-neutral-100 border-[6px] border-[#fe7473]
+                    rounded-full p-0.5 grid place-items-center mx-auto text-7xl ring-[6px] ring-[#fe595a]"
+      >
+        <PlayArrow fontSize="inherit" />
+      </span>
+      <h2 className="text-3xl mx-auto font-semibold mt-4 tracking-wider">
+        01:43
+      </h2>
+
+      <div className="flex items-center h-12 gap-1 mt-12">
+        {generateRandomValues(103).map((bar, index) => (
+          <div
+            key={`bar-${index}`}
+            className="rounded-t-full rounded-b-full w-2 bg-[#fe5353]"
+            style={{
+              height: `${bar}%`,
+            }}
+          />
+        ))}
+        <div className="border-dashed w-full border-[#e8e8e8] border" />
+      </div>
+
+      <div className="flex text-sm font-medium bg-[#f5ebec] rounded-full mt-12 justify-between px-4 py-1.5 relative">
+        <span>Discard</span>
+        <span
+          className=" text-neutral-100 top-1/2 -translate-y-1/2
+                    rounded-full p-0.5 grid place-items-center absolute left-1/2 -translate-x-1/2 bg-[#fe595a]"
+        >
+          <Pause fontSize="large" />
+        </span>
+        <span>Stop</span>
+      </div>
+    </div>
+  );
+};
+
+const Recordings = ({ setShowRecord }) => {
   return (
     <div className="flex-1 flex flex-col w-full">
       <h1 className="text-center text-2xl text-neutral-600 font-semibold mb-12">
@@ -152,6 +211,7 @@ const Recordings = () => {
       </GridList>
 
       <Button
+        onPress={() => setShowRecord(true)}
         className={buttonStyles({
           intent: "primary",
           class: "mx-auto mt-auto",
