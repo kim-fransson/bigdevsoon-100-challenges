@@ -55,7 +55,7 @@ export const VoiceRecording = () => {
 const Recordings = () => {
   return (
     <div className="flex-1 flex flex-col w-full">
-      <h1 className="text-center text-2xl text-neutral-600 font-semibold mb-auto">
+      <h1 className="text-center text-2xl text-neutral-600 font-semibold mb-12">
         Recordings
       </h1>
 
@@ -64,11 +64,10 @@ const Recordings = () => {
         selectionBehavior="replace"
         items={recordings}
         className="flex flex-col gap-4"
-        defaultSelectedKeys={[2]}
       >
         {(item) => (
           <GridListItem className={recordingListItemStyles()}>
-            {({ isFocusVisible, isFocused, isSelected }) => (
+            {({ isFocusVisible, isFocused }) => (
               <div className="cursor-pointer bg-[#f5ebec] rounded-lg px-4 py-2">
                 <div className="flex items-center gap-4 justify-between">
                   <div className="flex gap-3 items-center">
@@ -98,7 +97,7 @@ const Recordings = () => {
                 <div
                   className={twMerge(
                     "grid transition-[grid-template-rows] duration-500",
-                    isFocusVisible || isFocused || isSelected
+                    isFocusVisible || isFocused
                       ? "grid-rows-[1fr]"
                       : "grid-rows-[0fr]",
                   )}
