@@ -15,6 +15,7 @@ export * from "./Charts";
 export * from "./ChatBot";
 export * from "./CodeVerification";
 export * from "./ColorPalette";
+export * from "./ColumnsCard";
 export * from "./ContactUs";
 export * from "./CookiesBanner";
 export * from "./CreateAccount";
