@@ -35,6 +35,7 @@ export * from "./ExportFile";
 export * from "./FAQ";
 export * from "./Fingerprint";
 export * from "./FlightTicket";
+export * from "./Footer";
 export * from "./FriendRequest";
 export * from "./FurFriends";
 export * from "./GameProfile";

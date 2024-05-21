@@ -36,6 +36,7 @@ import {
   FAQ,
   Fingerprint,
   FlightTicket,
+  Footer,
   FriendRequest,
   FurFriends,
   GameProfile,
@@ -200,4 +201,5 @@ export const challenges = [
   { day: 97, title: "Design Assets", solution: DesignAssets },
   { day: 98, title: "Voice Recording", solution: VoiceRecording },
   { day: 99, title: "Columns Card", solution: ColumnsCard },
+  { day: 100, title: "Footer", solution: Footer },
 ];
